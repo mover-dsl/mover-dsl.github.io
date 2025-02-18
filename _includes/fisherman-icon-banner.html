@@ -1,0 +1,25 @@
+<!-- link to full site and github -->
+<div id="full-site-github" class="py-3 banner-box">
+  <div class="row justify-content-center align-items-center py-5 rubik">
+
+    <div class="col-10 col-lg-7">
+      <div class="row">
+
+        {% for icon in include.icons %}
+        <!-- icon -->
+        <div class="col-12 col-lg-6 text-left py-3 py-lg-0">
+          <a class="mr-auto" href="{{ icon.link }}" target="_blank">
+              <h5 class="text-left"><i class="{{ icon.fa }}"></i> {{ icon.full-text}}</h5>
+          </a>
+        </div>
+
+        {% endfor %}
+
+      <!-- end of sub row -->
+      </div>
+    <!-- end of col-10 -->
+    </div>
+  <!-- end of row -->
+  </div>
+
+</div>

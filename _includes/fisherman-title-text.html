@@ -1,0 +1,74 @@
+<!--
+Pass in:
+    - (title-only)
+    - (top-margin)
+    - id
+    - color
+    - title
+    - text
+    - team
+    - role
+    - date
+-->
+
+<!-- title text -->
+<div id="{{ include.title | downcase | split: ' ' | join: '-' }}" class="py-3 mt-{{ include.top-margin | default: 5}} {{ include.bg-color}}">
+
+    <!-- title -->
+    {% if include.text == nil %}
+    <div class="row justify-content-center mt-4">
+        {% else %}
+        <div class="row justify-content-center mt-4 mb-4">
+            {% endif %}
+
+            {% if include.title %}
+            <div class="col-10 col-lg-7 rubik">
+                <div class="title-bar"></div>
+                <h4 class="text-left">{{ include.title }}</h4>
+            </div>
+            {% endif %}
+        </div>
+
+        <!-- text -->
+        {% if include.text %}
+        <div class="row justify-content-center mb-3">
+            <div class="col-10 col-lg-7 rubik line-spacing">
+                <p>{{ include.text }}</p>
+
+                {% if include.stats %}
+                <br><br>
+                <div class="row rubik justify-content-center">
+                    {% for stat in include.stats %}
+                    <div class="col-12 col-lg-6 text-center">
+                        <div class="text-left">
+                            <h1>{{stat.num}}</h1>
+                            <p class="text-muted">{{stat.subtitle}}</p>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% endif %}
+
+                <p>
+                    {% if include.role %}
+                    <br>
+                    <i class="far fa-id-card"></i> {{ include.role}} <br>
+                    {% endif %}
+
+                    {% if include.date %}
+                    <i class="far fa-clock"></i> {{ include.date}} <br>
+                    {% endif %}
+
+                    {% if include.team %}
+                    <i class="fas fa-users"></i> {{ include.team}} <br>
+                    {% endif %}
+
+                    {% if include.tech %}
+                    <i class="fas fa-layer-group"></i> {{ include.tech}} <br>
+                    {% endif %}
+                </p>
+            </div>
+        </div>
+        {% endif %}
+
+    </div>

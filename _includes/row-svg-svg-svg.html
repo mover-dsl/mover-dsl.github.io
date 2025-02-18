@@ -1,0 +1,24 @@
+{% if include.row-svg %}
+{% assign title = include.row-svg | split: ' ' | first | downcase %}
+{% endif %}
+<div {% if include.row-svg %}
+     id="{{ title }}"
+     {% endif %} 
+     class="row w-100 mt-{{ include.t-margin }} mb-{{ include.b-margin }}">
+     <!-- Title -->
+    {% if include.row-svg %}
+    <h5>{{ include.row-svg }}</h5>
+    {% endif %}
+    <!-- output SVG 1-->
+    <div class="col-4">
+        {% include unit-svg.html svg-name=include.svg-1 id=include.svg-id-1 caption=include.svg-caption-1 %}
+    </div>
+    <!-- output SVG 2-->
+    <div class="col-4">
+        {% include unit-svg.html svg-name=include.svg-2 id=include.svg-id-2 caption=include.svg-caption-2 %}
+    </div>
+    <!-- output SVG 3-->
+    <div class="col-4">
+        {% include unit-svg.html svg-name=include.svg-3 id=include.svg-id-3 caption=include.svg-caption-3 %}
+    </div>
+</div>

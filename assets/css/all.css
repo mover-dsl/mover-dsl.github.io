@@ -1,0 +1,27 @@
+html, body {
+    font-family: "Rubik", serif;
+    font-optical-sizing: auto;
+}
+
+b {
+    margin-bottom: 0;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+  font-size: 80% !important;
+}
+
+/* pre > code {
+    font-size: 8pt;
+} */
+
+a {
+    color: black !important;
+    /* text-decoration: none; */
+}
+
+a:hover {
+    color: black !important;
+    text-decoration: underline;
+}

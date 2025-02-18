@@ -1,0 +1,21 @@
+{% assign title = include.section-title | split: ' ' %}
+{% if include.section-title %}
+{% include section-bar.html title=include.section-title t-margin=include.bar-t-margin %}
+{% endif %}
+{% for row in include.rows %}
+{% include row-svg-svg-svg.html row-svg=row.row-svg
+                                svg-1=row.svg-1
+                                svg-id-1=row.svg-id-1
+                                svg-caption-1=row.svg-caption-1
+                                svg-2=row.svg-2
+                                svg-id-2=row.svg-id-2
+                                svg-caption-2=row.svg-caption-2
+                                svg-3=row.svg-3
+                                svg-id-3=row.svg-id-3
+                                svg-caption-3=row.svg-caption-3
+                                width=include.page.width 
+                                height=include.page.height 
+                                row-title=row.row-title 
+                                t-margin=include.t-margin 
+                                b-margin=include.b-margin %}
+{% endfor %}

@@ -1,0 +1,27 @@
+_site
+.sass-cache
+.jekyll-cache
+.jekyll-metadata
+vendor
+.DS_Store
+
+# assets/css
+# assets/svg_original
+# assets/svg_old
+# assets/svg_512
+# assets/vid
+# assets/audio
+# assets/sprite
+# assets/img
+# assets/pdf
+
+# assets/css/*
+# !assets/css/all.css
+# assets/js/*
+# !assets/js/svg_vis.js
+# assets/svg_html/api.js
+# assets/svg_html/gsap.min.js
+# assets/svg_html/vis.js
+# assets/svg_html/index.css
+# assets/dataset/*
+assets/video/*

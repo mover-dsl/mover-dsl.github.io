@@ -1,0 +1,30 @@
+{% assign pageName = page.name | split: '.' | first %}
+<div class="row w-100 justify-content-center mt-3 px-5">
+    <div class="col-12">
+        <div class="d-inline-block pe-3">
+            <a href="./index.html" style="text-decoration: none; color: black;">
+                <h5
+                    {% if pageName == 'index' %}
+                        class="text-decoration-underline"
+                    {% endif %}
+                >
+                    All results
+                </h5>
+            </a>
+        </div>
+        <!-- <div class="d-inline-block px-3" style="border-left: 1.5px solid rgb(126, 126, 126)">
+            <a href="./supplemental_1116.pdf" style="text-decoration: none; color: black;">
+                <h5>Supplemental Material PDF</h5>
+            </a>
+        </div>
+        <div class="d-inline-block px-3" style="border-left: 1.5px solid rgb(126, 126, 126)">
+            <a href="./dataset.html" style="text-decoration: none; color: black;">
+                <h5
+                    {% if pageName == 'dataset' %}
+                        class="text-decoration-underline"
+                    {% endif %}
+                >Test prompt dataset</h5>
+            </a>
+        </div> -->
+    </div>
+</div>

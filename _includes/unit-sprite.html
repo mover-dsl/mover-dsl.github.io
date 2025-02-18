@@ -1,0 +1,16 @@
+<video width="{{ include.width }}" height="{{ include.height }}" controls>
+    {% assign video-file = include.sprite-name | split: '.' | first | prepend: '/assets/sprite/' | append: '.mp4' %}
+    {% assign hasMP4 = false %}
+    {% for static_file in site.static_files %}
+        {% if static_file.path == video-file %}
+            {% assign hasMP4 = true %}
+        {% endif %}
+    {% endfor %}
+    {% if hasMP4 %}
+        <source src="./assets/sprite/{{ include.sprite-name | split: '.' | first | append: '.mp4' }}" type="video/mp4">
+    {% else %}
+        <source src="./assets/sprite/{{ include.sprite-name | split: '.' | first | append: '.mov' }}" type="video/mp4">
+    {% endif %} 
+    Your browser does not support the video tag.
+</video>
+<p>{{ include.caption }}</p>

@@ -1,0 +1,229 @@
+html, body {
+    margin: 0;
+    padding:0;
+    overflow-x: hidden;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+}
+
+.rubik-light {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 300;
+}
+
+.rubik {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+}
+
+.rubik-italic {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.rubik-medium {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+}
+
+
+.rubik-semi-bold {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 600;
+}
+
+.line-spacing {
+    line-height: 1.5 !important;
+}
+
+.line-less-spacing {
+    line-height: 1.5 !important;
+}
+
+#nav {
+    z-index: 2;
+}
+
+.bg-nav a {
+    color: white;
+} */
+
+
+.img-blur {
+    filter: blur(6px);
+}
+
+.grey {
+    color: #a9a9a9;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+.banner-box {
+    border-top: 1px solid #a9a9a9;
+    border-bottom: 1px solid #a9a9a9;
+}
+
+.greyscale {
+    -webkit-filter: grayscale(100%);
+    /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+    opacity: 0.5;
+}
+
+.greyscale:hover {
+    -webkit-filter: grayscale(0%);
+    /* Safari 6.0 - 9.0 */
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+.btn.hamburger {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+.fas.fa-bars {
+    -webkit-transition: all 0.5s ease;
+    /* Safari */
+    transition: all 0.5s ease;
+}
+
+.fas.fa-bars:hover {
+    -webkit-transform: rotate(90deg);
+    /* Chrome, Opera 15+, Safari 3.1+ */
+    -ms-transform: rotate(90deg);
+    /* IE 9 */
+    transform: rotate(90deg);
+    /* Firefox 16+, IE 10+, Opera */
+}
+
+/* side bar */
+.sidenav {
+    height: 100%;
+    /* 100% Full-height */
+    width: 0;
+    /* 0 width - change this with JavaScript */
+    position: fixed;
+    /* Stay in place */
+    z-index: 3;
+    /* Stay on top */
+    top: 0;
+    /* Stay at the top */
+    left: 0;
+    background-color: #fff;
+    /* Black*/
+    box-shadow: 2px 0px 10px #c8c8c8;
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+    padding-top: 60px;
+    /* Place content 60px from the top */
+    transition: 0.5s;
+    /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav>a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #000;
+    display: block;
+    transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+a:hover {
+    color: #a9a9a9;
+    text-decoration: none;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+a {
+    color: inherit;
+}
+
+.footer-link>a:hover {
+    color: inherit;
+}
+
+.iphoneFrame {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    width: 83.5%;
+    height: 75.5%;
+    overflow: hidden;
+}
+
+.abs-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.title-bar {
+    height: 35px;
+    width: 40px;
+    border-top: 2px solid #000;
+}
+
+.quote {
+    display: block;
+    font-family: 'Rubik', sans-serif;
+    padding-left: 20px;
+    border-left: solid 3px #a9a9a9;
+    margin: 15px 0;
+    font-style: italic;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+
+/* 991px is lg sreen size */
+/* @media screen and (max-width: 991px) and (orientation: portrait) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    h5 {
+        font-size: 1.2em;
+    }
+
+    p {
+        font-size: 1.1em;
+    }
+}
+
+@media screen and (max-width: 991px) and (orientation: landscape) {
+    .landing {
+        padding: 10%;
+    }
+} */

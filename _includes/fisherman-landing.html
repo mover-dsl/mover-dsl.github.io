@@ -1,0 +1,64 @@
+<!--
+    Pass in:
+    - (col-width)
+    - title
+    - subtitle
+-->
+
+<div class="mt-5 {{include.outer-class}}">
+    <div class="row justify-content-center pt-5 pb-3">
+
+        <div class="col-10 col-lg-7 my-3 d-block">
+            <h4 class="rubik">{{ include.title }}</h4>
+            {% if include.subtitle %}
+            <h5 class="rubik-light">{{ include.subtitle }}</h5>
+            {% endif %}
+            {% if include.conference %}
+            <br>
+            <a href="{{ include.conference.link }}" target="_blank"><h5><i>{{ include.conference.title}}</i></h5></a>
+            {% endif %}
+            {% if include.award %}
+            <h5 class="rubik-light">{{ include.award }}</h5>
+            {% endif %}
+        </div>
+
+        <!-- cover image or vid-->
+        {% if include.cover or include.cover-vid or include.cover-vid-link%}
+        <div class="w-100 d-none d-lg-block"></div>
+
+        <div class="col-10 col-lg-{{ include.col-width | default: 7}} d-block
+        mt-{{ include.t-sm-pad | default: 0}}
+        mt-lg-{{ include.t-lg-pad | default: 0}} text-center">
+
+            {% if include.cover-vid %}
+
+            <video playsinline autoplay loop muted class="embed-responsive embed-responsive-1by1"
+                poster="/assets/img/loader.gif"
+                src="{{ include.cover-vid }}">
+            </video>
+
+            {% elsif include.cover-vid-link %}
+
+            <div class="embed-responsive
+                        {% if include.4by3 %}
+                        embed-responsive-4by3
+                        {% else %}
+                        embed-responsive-16by9
+                        {% endif %}" style="{{ include.video-style }}">
+                <iframe src="{{ include.cover-vid-link }}" allowfullscreen></iframe>
+            </div>
+
+            {% else %}
+
+            {% assign names = include.cover | split: "/" %}
+            <img class="img-fluid" src="{{ include.cover }}" alt="{{ names.last }}">
+
+            {% endif %}
+
+        </div>
+        {% endif %}
+
+        <!-- end of row   -->
+    </div>
+    <!-- end of div -->
+</div>

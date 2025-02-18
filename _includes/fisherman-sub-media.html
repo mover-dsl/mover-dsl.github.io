@@ -1,0 +1,108 @@
+<!--
+    Pass in:
+    - top-margin
+    - width (image)
+    - (bg-color)
+    - title
+    - img
+    - shadow
+-->
+
+<!-- image is col 10 in mobile -->
+<div class="row justify-content-center mt-{{ include.top-margin | default: 4 }}">
+    <div class="col-10 col-lg-{{include.width | default: 7}}">
+
+        <!-- title -->
+        {% if include.title or include.title-left %}
+
+        {% if include.img-link %} <a href="{{ include.img-link }}" target="_blank"> {% endif %}
+
+            {% if include.title-left %}
+            <h5 class="text mb-2">{{ include.title-left }}</h5>
+            {% else %}
+            <h5 class="text-center grey">{{ include.title }}</h5>
+            {% endif %}
+
+            {% if include.img-link %} </a> {% endif %}
+
+        {% endif %}
+
+        <p>{{ include.text-left }}</p>
+
+        <!-- image or video -->
+        <div class="mt-{{ include.vt-pad | default: 5}} mb-{{ include.vb-pad | default: 5}}">
+
+            {% if include.img %}
+            {% assign names = include.img | split: "/" %}
+
+            {% if include.img-link %} <a href="{{ include.img-link }}" target="_blank"> {% endif %}
+                <img class="img-fluid {% if include.shadow %}shadow{% endif %}
+            {% if include.blur %}img-blur{% endif %}"
+                    src="{{ include.img }}" alt="{{ names.last }}">
+                {% if include.img-link %} </a> {% endif %}
+
+            {% endif %}
+
+            {% if include.video-file %}
+            <video playsinline autoplay loop muted class="
+            {% if include.vid-no-shadow %}
+            {% else %}
+            shadow 
+            {% endif %}
+            embed-responsive embed-responsive-16by9
+                {{ include.video-class }}"
+                poster="/assets/img/loader.gif"
+                src="{{ include.video-file }}">
+            </video>
+
+            {% endif %}
+
+            {% if include.video-link %}
+            <div class="embed-responsive
+              {% if include.4by3 %}
+              embed-responsive-4by3
+              {% else %}
+              embed-responsive-16by9
+              {% endif %}
+              {% if include.blur %}img-blur{% endif %}
+              {% if include.vid-no-shadow %}
+              {% else %}
+              shadow 
+              {% endif %}
+              iframe-container"
+              style="{{ include.video-style }}">
+              <iframe src="{{ include.video-link }}" allowfullscreen></iframe>
+            </div>
+            {% endif %}
+
+            {% if include.json-id %}
+            <div id="{{ include.json-id }}"></div>
+            {% endif %}
+
+        </div>
+
+        <p>{{ include.text-bottom }}</p>
+
+    </div>
+</div>
+
+<!-- text is col 9 in mobile-->
+{% if include.text %}
+<div class="row justify-content-center mb-5">
+    <div class="col-9 col-lg-7 line-spacing">
+        <p>
+            {{ include.text }}
+        </p>
+    </div>
+</div>
+{% endif %}
+
+{% if include.caption %}
+<div class="row justify-content-center mb-5">
+    <div class="col-9 col-lg-7 line-spacing">
+        <p class="text-muted">
+            <i>{{ include.caption }}</i>
+        </p>
+    </div>
+</div>
+{% endif %}

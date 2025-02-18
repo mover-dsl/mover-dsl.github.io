@@ -1,0 +1,23 @@
+o_1 = iota(Object, lambda o: id(o, "letter-Y")): True
+id: True
+
+o_2 = iota(Object, lambda o: id(o, "letter-E")): True
+id: True
+
+o_3 = iota(Object, lambda o: id(o, "letter-S")): True
+id: True
+
+m_1 = iota(Motion, lambda m: type(m, "translate") and post(m, s_left_border(o_1, o_2)) and agent(m, o_1)): True
+type: True
+post: True
+s_left_border: True
+agent: True
+
+m_2 = iota(Motion, lambda m: type(m, "translate") and post(m, s_right_border(o_3, o_2)) and agent(m, o_3)): True
+type: True
+post: True
+s_right_border: True
+agent: True
+
+t_before(m_1, m_2): True
+t_before: True

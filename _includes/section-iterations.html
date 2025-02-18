@@ -1,0 +1,43 @@
+<!-- <h2><a href="./index.html"><</a></h2> -->
+<div class="d-flex justify-content-between w-100 fixed-top ms-5 mt-5 " style="z-index: 99999">
+    <div class="align-self-end">
+        <p><a href="./index.html" style="color: black; text-decoration: none">Back to All Results</a></p>
+    </div>
+    <div>
+        <!-- <h2>{{ include.page.title }}</h2> -->
+        <h2>{{ include.page.name | split: '.' | first }}</h2>
+    </div>
+    <div>
+        <h6 class="text-white">Back to All Results</h6>
+    </div>
+</div>
+
+<div class="row justify-content-between m-0 p-0">
+    <div class="col-5 fixed-top pt-5 ps-5 pe-3 me-3 h-100" style="background-color: #F2F2EA;">
+        {% include unit-input.html svg=include.svg prompt=include.prompt secondary-prompt=include.secondary-prompt %}
+        <br>
+        <b>MoVer program</b>
+        {% include unit-report.html code=include.program %}
+        {% if include.video %}
+        <br />
+        <b>Video</b>
+        <br />
+        <a href="{{ include.video }}" target="_blank">Click here to watch the video walkthrough</a>
+        {% endif include.video %}
+    </div>
+    <div class="col-7 offset-5">
+        <div class="mt-5"></div>
+        {% for iteration in include.iterations %}
+        {% assign iter_index = forloop.index %}
+        {% capture report_content %}
+        {% include_relative assets/reports/{{ iteration.report }} %}
+        {% endcapture %}
+        {% assign report_content = report_content | strip %}
+        {% include row-animation-code.html name=iteration.name code=report_content svg-html=iteration.svg-html
+        iter=iter_index height="400" caption=iteration.caption title=iteration.title report-title=iteration.report-title %}
+        {% unless forloop.last %}
+        <hr />
+        {% endunless %}
+        {% endfor %}
+    </div>
+</div>

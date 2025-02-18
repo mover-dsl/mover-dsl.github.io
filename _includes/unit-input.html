@@ -1,0 +1,21 @@
+<div class="row mt-5">
+    <div class="col-4 ">
+        <b>Input static SVG</b>
+        <img class="img-fluid" src="./assets/svg/{{ include.svg }}" alt="SVG Image">
+    </div>
+    <div class="col-8 ps-2">
+        <b>Input text prompt</b>
+        <br>
+        &lt;svg&gt;...&lt;/svg&gt;
+        <br>
+        {{ include.prompt }}
+        {% if include.secondary-prompt %}
+        <br><br>
+        <b>Revised input text prompt</b>
+        <br>
+        &lt;svg&gt;...&lt;/svg&gt;
+        <br>
+        {{ include.secondary-prompt }}
+        {% endif %}
+    </div>
+</div>

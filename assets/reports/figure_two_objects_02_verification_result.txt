@@ -1,0 +1,13 @@
+o_1 = iota(Object, lambda o: color(o, "blue") and shape(o, "square")): True
+color: True
+shape: True
+
+o_2 = iota(Object, lambda o: color(o, "black") and shape(o, "square")): True
+color: True
+shape: True
+
+exists(Motion, lambda m_1: type(m_1, "rotate") and post(m_1, s_intersect(o_1, o_2)) and agent(m_1, o_1)): True
+type: True
+post: True
+s_intersect: True
+agent: True

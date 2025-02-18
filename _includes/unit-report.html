@@ -1,0 +1,9 @@
+<pre style="width: {{ include.width }}px; height: {{ include.height }}px; background-color: #333333; max-height: 500px" ><code 
+    id="{{ include.name | split: '.' | first }}-transformer" 
+    class="language-{{ include.language | default: 'javascript' }}" 
+    style="overflow:scroll; width: {{ include.width }}px; height: {{ include.height }}px; max-height: 500px">{{ include.code }}</code></pre>
+{% if include.caption %}
+<div class="mb-2" style="width: {{ include.width }}px">
+    <p class="d-inline">{{ include.caption }}</p>
+</div>
+{% endif %}

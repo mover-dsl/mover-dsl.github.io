@@ -1,0 +1,10 @@
+<h4 style="border-top: 1px solid rgb(126, 126, 126); border-bottom: 1px solid rgb(126, 126, 126);" 
+    class="py-2 mt-{{ include.t-margin | default: 5 }}"
+
+>   
+    {% if include.href %}
+    <a href="{{ include.href }}" style="color: black; text-decoration: none">{{ include.title }}</a>
+    {% else %}
+    {{ include.title }}
+    {% endif %}
+</h4>

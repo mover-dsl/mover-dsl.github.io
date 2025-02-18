@@ -1,0 +1,14 @@
+<div 
+    {% assign object-id = include.svg-name | append: '-' | append: include.id %}
+    id='{{ object-id }}' class="mb-1">
+    {% if include.svg-name %}
+    {% include_relative assets/svg_512/{{ include.svg-name | append: '.svg' }} %}
+    {% endif %}
+</div>
+{% if include.audio %}
+<audio id="{{ include.svg-name }}-audio" ontimeupdate="limit_play_time(this, {{ include.audio-length }})" src="./assets/audio/{{ include.audio }}"></audio>
+<button type="button" class="btn btn-dark btn-sm" onclick="play_with_audio('{{ object-id }}', '{{ include.svg-name }}-audio')">Play with Audio</button>
+{% else %}
+<button type="button" class="btn btn-dark btn-sm" onclick="playSVG('{{ object-id }}')">Play</button>
+{% endif %}
+<p class="d-inline">{{ include.caption }}</p>

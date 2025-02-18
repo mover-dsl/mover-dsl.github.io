@@ -1,0 +1,37 @@
+{% if include.row-title %}
+{% assign title = include.row-title | split: ' ' | first | downcase %}
+{% endif %}
+<div {% if include.row-title %}
+     id="{{ title }}"
+     {% endif %} 
+     class="row w-100 mt-{{ include.t-margin }} mb-{{ include.b-margin }}">
+    <!-- Title -->
+    {% if include.row-title %}
+    <h5>{{ include.row-title }}</h5>
+    {% endif %}
+    <!-- Input SVG -->
+    <div class="col-3">
+        {% assign input-svg-name = include.name | split: '.' | first %}
+        {% include unit-svg.html svg-name=input-svg-name id=include.input-svg-id caption=include.input-svg-caption %}              
+    </div>
+    <!-- Transformer -->
+    <div class="col-3">
+        {% include unit-transformer.html name=include.output-svg width=include.width height=include.height transformer=include.transformer caption=include.transformer-caption%}
+    </div>
+    <!-- Output SVG/Video -->
+    <div class="col-3">
+        {% unless include.output-video-1 %}
+        {% include unit-svg.html svg-name=include.output-svg-1 id=include.output-svg-id-1 audio=include.output-audio-1 audio-length=row.audio-length-1 caption=include.output-svg-caption-1 %}
+        {% else %}
+        {% include unit-video.html name=include.output-video-1 width=include.width height=include.height caption=include.output-video-caption-1 %}
+        {% endunless %}
+    </div>
+    <!-- Output SVG/Video -->
+    <div class="col-3">
+        {% unless include.output-video-2 %}
+        {% include unit-svg.html svg-name=include.output-svg-2 id=include.output-svg-id-2 audio=include.output-audio-2 audio-length=row.audio-length-2 caption=include.output-svg-caption-2 %}
+        {% else %}
+        {% include unit-video.html name=include.output-video-2 width=include.width height=include.height caption=include.output-video-caption-2 %}
+        {% endunless %}
+    </div>
+</div>

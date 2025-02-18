@@ -1,0 +1,18 @@
+<div class="row w-100 mt-{{ include.t-margin }} mb-{{ include.b-margin }}">
+    <!-- input video -->
+    <div class="col-4">
+        {% if include.hide-video %}
+        {% else %}
+        {% include unit-video.html name=include.name width=include.width height=include.height  caption=include.video-caption %}
+        {% endif %}
+    </div>
+    <!-- svg in text -->
+    <div class="col-4">
+        {% include unit-code.html name=include.name width=include.width height=include.height  caption=include.code-caption%}
+    </div>
+    <!-- output SVG -->
+    <div class="col-4">
+        {% assign input-svg-name = include.name | split: '.' | first %}
+        {% include unit-svg.html svg-name=input-svg-name id=include.id  caption=include.svg-caption %}
+    </div>
+</div>

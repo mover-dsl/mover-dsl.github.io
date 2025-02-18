@@ -1,0 +1,37 @@
+o_1 = iota(Object, lambda o: id(o, "letter-w-1")): True
+id: True
+
+o_2 = iota(Object, lambda o: id(o, "letter-w-2")): True
+id: True
+
+o_3 = iota(Object, lambda o: id(o, "letter-o")): True
+id: True
+
+o_4 = iota(Object, lambda o: color(o, "pink") and shape(o, "circle")): True
+color: True
+shape: True
+
+m_1 = iota(Motion, lambda m: type(m, "rotate") and magnitude(m, 180.0) and origin(m, get_pos(o_4)) and agent(m, o_1)): True
+type: True
+magnitude: True
+origin: True
+agent: True
+
+m_2 = iota(Motion, lambda m: type(m, "rotate") and magnitude(m, 180.0) and origin(m, get_pos(o_4)) and agent(m, o_2)): True
+type: True
+magnitude: True
+origin: True
+agent: True
+
+m_3 = iota(Motion, lambda m: type(m, "translate") and direction(m, [0.0, -1.0]) and post(m, s_bottom_border(o_3, o_2)) and agent(m, o_3)): True
+type: True
+direction: True
+post: True
+s_bottom_border: True
+agent: True
+
+t_before(m_1, m_2): True
+t_before: True
+
+t_before(m_2, m_3): True
+t_before: True

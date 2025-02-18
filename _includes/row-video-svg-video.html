@@ -1,0 +1,16 @@
+<div class="row w-100 mt-{{ include.t-margin }} mb-{{ include.b-margin }}">
+    <!-- input video -->
+    <div class="col-4">
+        {% include unit-video.html name=include.name width=include.width height=include.height caption=include.video-caption %}
+    </div>
+    <!-- output SVG 1-->
+    <div class="col-4">
+        {% assign input-svg-name = include.name | split: '.' | first %}
+        {% include unit-svg.html svg-name=input-svg-name id=include.id  caption=include.svg-caption %}
+    </div>
+    <!-- Video 2-->
+    <div class="col-4">
+        {% assign sprite-name = include.name | split: '.' | first %}
+        {% include unit-sprite.html sprite-name=sprite-name caption=include.sprite-caption %}
+    </div>
+</div>

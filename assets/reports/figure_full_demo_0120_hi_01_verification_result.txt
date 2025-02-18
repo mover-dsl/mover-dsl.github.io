@@ -1,0 +1,24 @@
+o_1 = iota(Object, lambda o: color(o, "orange") and shape(o, "circle")): True
+color: True
+shape: True
+
+o_2 = iota(Object, lambda o: shape(o, "rectangle")): True
+shape: True
+
+o_3 = iota(Object, lambda o: id(o, "letter-H")): True
+id: True
+
+m_1 = iota(Motion, lambda m: type(m, "translate") and post(m, s_top(o_1, o_2)) and agent(m, o_1)): False
+type: True
+post: False
+s_top: False
+agent: True
+
+m_2 = iota(Motion, lambda m: type(m, "rotate") and direction(m, "clockwise") and magnitude(m, 90.0) and agent(m, o_3)): True
+type: True
+direction: True
+magnitude: True
+agent: True
+
+t_while(m_1, m_2): False
+t_while: False

@@ -1,0 +1,84 @@
+o_1 = iota(Object, lambda o: id(o, "letter-H-yellow")): True
+id: True
+
+o_2 = iota(Object, lambda o: id(o, "letter-A-red")): True
+id: True
+
+o_3 = iota(Object, lambda o: id(o, "letter-H-pink")): True
+id: True
+
+o_4 = iota(Object, lambda o: id(o, "letter-A-blue")): True
+id: True
+
+m_1 = iota(Motion, lambda m: type(m, "scale") and origin(m, ["50%", "0%"]) and post(m, s_top_border(o_1, o_2)) and agent(m, o_1)): True
+type: True
+origin: True
+post: True
+s_top_border: True
+agent: True
+
+m_2 = iota(Motion, lambda m: type(m, "scale") and direction(m, [0.0, -1.0]) and magnitude(m, [1.0, 1.0]) and agent(m, o_1)): True
+type: True
+direction: True
+magnitude: True
+agent: True
+
+m_3 = iota(Motion, lambda m: type(m, "scale") and origin(m, ["50%", "100%"]) and post(m, s_bottom_border(o_2, o_1)) and agent(m, o_2)): True
+type: True
+origin: True
+post: True
+s_bottom_border: True
+agent: True
+
+m_4 = iota(Motion, lambda m: type(m, "scale") and direction(m, [0.0, -1.0]) and magnitude(m, [1.0, 1.0]) and agent(m, o_2)): True
+type: True
+direction: True
+magnitude: True
+agent: True
+
+m_5 = iota(Motion, lambda m: type(m, "scale") and origin(m, ["50%", "100%"]) and post(m, s_bottom_border(o_3, o_4)) and agent(m, o_3)): True
+type: True
+origin: True
+post: True
+s_bottom_border: True
+agent: True
+
+m_6 = iota(Motion, lambda m: type(m, "scale") and direction(m, [0.0, -1.0]) and magnitude(m, [1.0, 1.0]) and agent(m, o_3)): True
+type: True
+direction: True
+magnitude: True
+agent: True
+
+m_7 = iota(Motion, lambda m: type(m, "scale") and origin(m, ["50%", "0%"]) and post(m, s_top_border(o_4, o_3)) and agent(m, o_4)): True
+type: True
+origin: True
+post: True
+s_top_border: True
+agent: True
+
+m_8 = iota(Motion, lambda m: type(m, "scale") and direction(m, [0.0, -1.0]) and magnitude(m, [1.0, 1.0]) and agent(m, o_4)): True
+type: True
+direction: True
+magnitude: True
+agent: True
+
+t_before(m_1, m_2): True
+t_before: True
+
+t_while(m_2, m_3): True
+t_while: True
+
+t_before(m_3, m_4): True
+t_before: True
+
+t_while(m_1, m_5): True
+t_while: True
+
+t_before(m_5, m_6): True
+t_before: True
+
+t_while(m_6, m_7): True
+t_while: True
+
+t_before(m_7, m_8): True
+t_before: True

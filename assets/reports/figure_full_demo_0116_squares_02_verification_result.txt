@@ -1,0 +1,99 @@
+o_1 = all(Object, lambda o: color(o, "green") and shape(o, "square")): True
+color: True
+shape: True
+
+o_2 = all(Object, lambda o: color(o, "yellow") and shape(o, "square")): True
+color: True
+shape: True
+
+o_3 = all(Object, lambda o: color(o, "blue") and shape(o, "square")): True
+color: True
+shape: True
+
+o_4 = all(Object, lambda o: color(o, "black") and shape(o, "square")): True
+color: True
+shape: True
+
+o_5 = all(Object, lambda o: color(o, "purple") and shape(o, "square")): True
+color: True
+shape: True
+
+m_1 = iota(Motion, lambda m: type(m, "translate") and direction(m, [1.0, 0.0]) and magnitude(m, 100.0) and agent(m, o_1)): True
+type: True
+direction: True
+magnitude: True
+agent: True
+
+m_2 = iota(Motion, lambda m: type(m, "translate") and direction(m, [1.0, 0.0]) and magnitude(m, 100.0) and agent(m, o_2)): True
+type: True
+direction: True
+magnitude: True
+agent: True
+
+m_3 = iota(Motion, lambda m: type(m, "rotate") and direction(m, "counterclockwise") and magnitude(m, 90.0) and origin(m, [250.0, 100.0]) and agent(m, o_3)): True
+type: True
+direction: True
+magnitude: True
+origin: True
+agent: True
+
+m_4 = iota(Motion, lambda m: type(m, "rotate") and direction(m, "clockwise") and magnitude(m, 90.0) and origin(m, [250.0, 300.0]) and agent(m, o_4)): True
+type: True
+direction: True
+magnitude: True
+origin: True
+agent: True
+
+m_5 = iota(Motion, lambda m: type(m, "rotate") and direction(m, "counterclockwise") and magnitude(m, 90.0) and origin(m, [250.0, 300.0]) and agent(m, o_4)): True
+type: True
+direction: True
+magnitude: True
+origin: True
+agent: True
+
+m_6 = iota(Motion, lambda m: type(m, "rotate") and direction(m, "clockwise") and magnitude(m, 90.0) and origin(m, [250.0, 100.0]) and agent(m, o_3)): True
+type: True
+direction: True
+magnitude: True
+origin: True
+agent: True
+
+m_7 = iota(Motion, lambda m: type(m, "translate") and direction(m, [-1.0, 0.0]) and magnitude(m, 100.0) and agent(m, o_1)): True
+type: True
+direction: True
+magnitude: True
+agent: True
+
+m_8 = iota(Motion, lambda m: type(m, "rotate") and direction(m, "clockwise") and magnitude(m, 90.0) and origin(m, [250.0, 200.0]) and agent(m, o_5)): True
+type: True
+direction: True
+magnitude: True
+origin: True
+agent: True
+
+m_9 = iota(Motion, lambda m: type(m, "translate") and direction(m, [1.0, 0.0]) and magnitude(m, 100.0) and agent(m, o_1)): True
+type: True
+direction: True
+magnitude: True
+agent: True
+
+t_while(m_1, m_3): True
+t_while: True
+
+t_while(m_3, m_4): True
+t_while: True
+
+t_after(m_5, m_4): True
+t_after: True
+
+t_after(m_6, m_4): True
+t_after: True
+
+t_after(m_7, m_4): True
+t_after: True
+
+t_after(m_8, m_4): True
+t_after: True
+
+t_after(m_9, m_8): True
+t_after: True

@@ -1,0 +1,72 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+
+    <link rel="stylesheet" href="./index.css">
+    <script src="./gsap.min.js"></script>
+    <script src="./api.js"></script>
+
+    <title></title>
+  </head>
+  <body>
+    <svg width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="400" height="400" fill="black"/>
+<path id="letter-H-pink" d="M239.28 332.128V298.08H229.04V332.128H206V244.064H229.04V277.6H239.28V244.064H262.32V332.128H239.28Z" fill="#FF769F"/>
+<path id="letter-A-red" d="M176.752 332.128L174.704 317.152H158.704L156.656 332.128H134L150.128 244.064H183.792L199.92 332.128H176.752ZM167.152 264.416H166.256L161.52 298.848H171.888L167.152 264.416Z" fill="#FD002D"/>
+<path id="letter-A-blue" d="M243.752 155.064L241.704 140.088H225.704L223.656 155.064H201L217.128 67H250.792L266.92 155.064H243.752ZM234.152 87.352H233.256L228.52 121.784H238.888L234.152 87.352Z" fill="#0271FF"/>
+<path id="letter-H-yellow" d="M172.28 155.064V121.016H162.04V155.064H139V67H162.04V100.536H172.28V67H195.32V155.064H172.28Z" fill="#FFB50D"/>
+</svg>
+
+    <button onclick="play()">Play</button>
+    <script id="svg-script">
+    // Select the SVG elements
+const yellowH = document.querySelector('#letter-H-yellow');
+const redA = document.querySelector('#letter-A-red');
+const pinkH = document.querySelector('#letter-H-pink');
+const blueA = document.querySelector('#letter-A-blue');
+
+// Create a timeline object
+const tl = createTimeline();
+
+// Compute necessary variables. Comment each line of code with your reasoning
+const yellowHCenter = getCenterPosition(yellowH); // Get the center position of the yellow H
+const redACenter = getCenterPosition(redA); // Get the center position of the red A
+const pinkHCenter = getCenterPosition(pinkH); // Get the center position of the pink H
+const blueACenter = getCenterPosition(blueA); // Get the center position of the blue A
+
+const yellowHSize = getSize(yellowH); // Get the size of the yellow H
+const redASize = getSize(redA); // Get the size of the red A
+const pinkHSize = getSize(pinkH); // Get the size of the pink H
+const blueASize = getSize(blueA); // Get the size of the blue A
+
+// Create the animation step by step. Comment each line of code with your reasoning
+
+// **Scale the yellow letter H from its top center in y to touch the top side of the red letter A.**
+scale(tl, yellowH, 1, 1, ((redACenter.y - yellowHCenter.y + redASize.height / 2 - yellowHSize.height / 2) / yellowHSize.height) + 1 - (redASize.height / yellowHSize.height), 0, '50%', '0%');
+
+// **Then scale yellow H back down to 1.**
+scale(tl, yellowH, 1, 1, 1, 1, '50%', '0%');
+
+// **As the H scales down, scale the red letter A up in y from its bottom center to touch the bottom side of the yellow letter H.**
+scale(tl, redA, 1, 1, ((yellowHCenter.y - redACenter.y + yellowHSize.height / 2 - redASize.height / 2) / redASize.height) + 1, 1, '50%', '100%');
+
+// **Then scale the red A back down to 1.**
+scale(tl, redA, 1, 1, 1, 2, '50%', '100%');
+
+// **As the yellow letter H scales up, resize the pink letter H up in y from its bottom center to touch the bottom side of the blue letter A.**
+scale(tl, pinkH, 1, 1, ((blueACenter.y - pinkHCenter.y + blueASize.height / 2 - pinkHSize.height / 2) / pinkHSize.height) + 1, 0, '50%', '100%');
+
+// **Then scale the pink H back down to 1.**
+scale(tl, pinkH, 1, 1, 1, 1, '50%', '100%');
+
+// **As the pink H scales down, resize the blue letter A up in y from its top center to touch the top side of the pink letter H.**
+scale(tl, blueA, 1, 1, ((pinkHCenter.y - blueACenter.y + pinkHSize.height / 2 - blueASize.height / 2) / blueASize.height) + 1, 1, '50%', '0%');
+
+// **Then scale the blue A back down to 1.**
+scale(tl, blueA, 1, 1, 1, 2, '50%', '0%');
+    </script>
+    <script src="./vis.js"></script>
+</body></html>

@@ -1,0 +1,46 @@
+o_1 = iota(Object, lambda o: color(o, "green") and shape(o, "triangle")): True
+color: True
+shape: True
+
+o_2 = all(Object, lambda o: shape(o, "circle")): True
+shape: True
+
+o_3 = iota(Object, lambda o: color(o, "blue") and shape(o, "circle")): True
+color: True
+shape: True
+
+o_4 = iota(Object, lambda o: color(o, "red") and shape(o, "circle")): True
+color: True
+shape: True
+
+m_1 = iota(Motion, lambda m: type(m, "rotate") and origin(m, get_pos(o_1)) and agent(m, o_2)): True
+type: True
+origin: True
+agent: True
+
+m_2 = iota(Motion, lambda m: type(m, "translate") and post(m, s_intersect(o_2, o_1)) and agent(m, o_2)): True
+type: True
+post: True
+s_intersect: True
+agent: True
+
+m_3 = iota(Motion, lambda m: type(m, "scale") and direction(m, [1.0, 1.0]) and magnitude(m, [3.0, 3.0]) and agent(m, o_3)): True
+type: True
+direction: True
+magnitude: True
+agent: True
+
+m_4 = iota(Motion, lambda m: type(m, "scale") and direction(m, [1.0, 1.0]) and magnitude(m, [2.0, 2.0]) and agent(m, o_4)): True
+type: True
+direction: True
+magnitude: True
+agent: True
+
+t_before(m_1, m_2): True
+t_before: True
+
+t_after(m_3, m_2): True
+t_after: True
+
+t_while(m_4, m_3): True
+t_while: True

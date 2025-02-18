@@ -1,0 +1,6 @@
+<svg width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="0" y="0" width="400" height="400" fill="white"/>
+<rect x="0.5" y="0.5" width="399" height="399" stroke="black"/>
+<rect id="black-square" x="275" y="175" width="50" height="50" fill="black"/>
+<rect id="blue-square" x="75" y="175" width="50" height="50" fill="#506EEB"/>
+</svg>

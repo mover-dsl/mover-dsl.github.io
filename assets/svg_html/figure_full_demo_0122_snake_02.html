@@ -1,0 +1,65 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+
+    <link rel="stylesheet" href="./index.css">
+    <script src="./gsap.min.js"></script>
+    <script src="./api.js"></script>
+
+    <title></title>
+  </head>
+  <body>
+    <svg width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect id="ignore" width="400" height="400" fill="#BDD6EF"/>
+<path id="letter-E" d="M360.799 321.012H332V279H360.799V287.408H340.408V295.816H354.207V304.225H340.408V312.604H360.799V321.012Z" fill="black"/>
+<path id="letter-K" d="M186.408 321.012H178V279H186.408V300.006L202.053 279H211.604L198.332 296.725L211.604 321.012H202.053L192.824 304.02L186.408 312.604V321.012Z" fill="black"/>
+<path id="letter-A" d="M203.195 192.225V183.816C203.195 182.664 202.971 181.58 202.521 180.564C202.092 179.529 201.496 178.631 200.734 177.869C199.973 177.107 199.074 176.512 198.039 176.082C197.023 175.633 195.939 175.408 194.787 175.408C193.635 175.408 192.541 175.633 191.506 176.082C190.49 176.512 189.602 177.107 188.84 177.869C188.078 178.631 187.473 179.529 187.023 180.564C186.594 181.58 186.379 182.664 186.379 183.816V192.225H203.195ZM211.604 209.012H203.195V200.604H186.379V209.012H178V183.816C178 181.492 178.439 179.314 179.318 177.283C180.197 175.232 181.389 173.445 182.893 171.922C184.416 170.398 186.193 169.197 188.225 168.318C190.275 167.439 192.463 167 194.787 167C197.111 167 199.289 167.439 201.32 168.318C203.371 169.197 205.158 170.398 206.682 171.922C208.205 173.445 209.406 175.232 210.285 177.283C211.164 179.314 211.604 181.492 211.604 183.816V209.012Z" fill="black"/>
+<path id="letter-N" d="M143.604 209.012H134.609L118.408 181.355V209.012H110V167H118.994L135.195 194.686V167H143.604V209.012Z" fill="black"/>
+<path id="letter-S" d="M76 70.5977C76 68.8594 76.332 67.2285 76.9961 65.7051C77.6602 64.1816 78.5586 62.8535 79.6914 61.7207C80.8438 60.5684 82.1816 59.6602 83.7051 58.9961C85.2285 58.332 86.8594 58 88.5977 58H107.875V66.4082H88.5977C88.0117 66.4082 87.4648 66.5156 86.957 66.7305C86.4492 66.9453 86 67.248 85.6094 67.6387C85.2383 68.0098 84.9453 68.4492 84.7305 68.957C84.5156 69.4648 84.4082 70.0117 84.4082 70.5977C84.4082 71.1836 84.5156 71.7402 84.7305 72.2676C84.9453 72.7754 85.2383 73.2246 85.6094 73.6152C86 73.9863 86.4492 74.2793 86.957 74.4941C87.4648 74.709 88.0117 74.8164 88.5977 74.8164H97.0059C98.7441 74.8164 100.375 75.1484 101.898 75.8125C103.441 76.457 104.779 77.3555 105.912 78.5078C107.064 79.6406 107.963 80.9785 108.607 82.5215C109.271 84.0449 109.604 85.6758 109.604 87.4141C109.604 89.1523 109.271 90.7832 108.607 92.3066C107.963 93.8301 107.064 95.168 105.912 96.3203C104.779 97.4531 103.441 98.3516 101.898 99.0156C100.375 99.6797 98.7441 100.012 97.0059 100.012H78.3438V91.6035H97.0059C97.5918 91.6035 98.1387 91.4961 98.6465 91.2812C99.1543 91.0664 99.5938 90.7734 99.9648 90.4023C100.355 90.0117 100.658 89.5625 100.873 89.0547C101.088 88.5469 101.195 88 101.195 87.4141C101.195 86.8281 101.088 86.2812 100.873 85.7734C100.658 85.2656 100.355 84.8262 99.9648 84.4551C99.5938 84.0645 99.1543 83.7617 98.6465 83.5469C98.1387 83.332 97.5918 83.2246 97.0059 83.2246H88.5977C86.8594 83.2246 85.2285 82.8926 83.7051 82.2285C82.1816 81.5645 80.8438 80.666 79.6914 79.5332C78.5586 78.3809 77.6602 77.043 76.9961 75.5195C76.332 73.9766 76 72.3359 76 70.5977Z" fill="black"/>
+</svg>
+
+    <button onclick="play()">Play</button>
+    <script id="svg-script">
+    // Select the SVG elements
+const letterE = document.querySelector('#letter-E');
+const letterK = document.querySelector('#letter-K');
+const letterA = document.querySelector('#letter-A');
+const letterN = document.querySelector('#letter-N');
+const letterS = document.querySelector('#letter-S');
+
+// Create a timeline object
+const tl = createTimeline();
+
+// Compute necessary variables. Comment each line of code with your reasoning
+const letterKCenter = getCenterPosition(letterK); // Get the center position of letter K to calculate its right side
+const letterKSize = getSize(letterK); // Get the size of letter K to calculate its right side
+const letterERightSide = letterKCenter.x + letterKSize.width / 2; // Calculate the right side of letter K
+
+const letterACenter = getCenterPosition(letterA); // Get the center position of letter A to calculate its bottom side
+const letterASize = getSize(letterA); // Get the size of letter A to calculate its bottom side
+const letterABottomSide = letterACenter.y + letterASize.height / 2; // Calculate the bottom side of letter A
+
+const letterNCenter = getCenterPosition(letterN); // Get the center position of letter N to calculate its right side
+const letterNSize = getSize(letterN); // Get the size of letter N to calculate its right side
+const letterNRightSide = letterNCenter.x + letterNSize.width / 2; // Calculate the right side of letter N
+
+const letterSTop = getCenterPosition(letterS).y - getSize(letterS).height / 2; // Calculate the top side of letter S
+
+// Create the animation step by step. Comment each line of code with your reasoning
+translate(tl, letterE, 0.5, letterKCenter.x - getCenterPosition(letterE).x + getSize(letterE).width, 0, 0); // **Move the letter E to touch the right side of the letter K.**
+
+translate(tl, letterK, 0.5, 0, letterACenter.y - getCenterPosition(letterK).y + getSize(letterK).height, 0.5); // **Then move the letter K up to be adjacent to the bottom side of A.**
+
+translate(tl, letterA, 0.5, letterNCenter.x - getCenterPosition(letterA).x + getSize(letterA).width, 0, 1); // **Right after that, shift the letter A to border the right side of N.**
+
+translate(tl, letterN, 0.5, 0, letterSTop - getCenterPosition(letterN).y + getSize(letterN).height / 2, 1.5); // **Immediately after that, elevate the N so its top side aligns with the top of S.**
+
+translate(tl, letterA, 0.5, 0, letterSTop - getCenterPosition(letterA).y + getSize(letterA).height / 2, 2); // **Finally, raise the letter A...**
+translate(tl, letterK, 0.5, 0, letterSTop - getCenterPosition(letterK).y + getSize(letterK).height / 2, 2); // **...K...**
+translate(tl, letterE, 0.5, 0, letterSTop - getCenterPosition(letterE).y + getSize(letterE).height / 2, 2); // **...and E at once so their top edges also align with that of S.**
+    </script>
+    <script src="./vis.js"></script>
+</body></html>

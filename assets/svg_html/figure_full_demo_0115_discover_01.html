@@ -1,0 +1,49 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+
+    <link rel="stylesheet" href="./index.css">
+    <script src="./gsap.min.js"></script>
+    <script src="./api.js"></script>
+
+    <title></title>
+  </head>
+  <body>
+    <svg width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="400" height="400" fill="#54B5CA"/>
+<text id="custom-discover" fill="white" xml:space="preserve" style="white-space: pre" font-family="sans-serif" font-size="48" font-weight="900" letter-spacing="0em"><tspan x="75" y="126.406">DISCOVER</tspan></text>
+<g id="custom-binocular">
+<path id="ignore" d="M144.901 250.534C129.752 250.534 117.468 262.882 117.468 278.114C117.468 293.338 129.751 305.684 144.901 305.684C160.05 305.684 172.333 293.337 172.333 278.114C172.333 262.881 160.051 250.534 144.901 250.534Z" fill="#021335"/>
+<path id="ignore_2" fill-rule="evenodd" clip-rule="evenodd" d="M144.901 238.002C122.868 238.002 105 255.962 105 278.116C105 300.26 122.867 318.221 144.901 318.221C165.932 318.221 183.158 301.866 184.69 281.123C184.764 280.13 184.801 279.128 184.801 278.117C184.801 275.343 184.523 272.644 183.985 270.028C180.265 251.752 164.179 238.005 144.901 238.005L144.901 238.002ZM112.479 278.116C112.479 260.11 126.997 245.525 144.901 245.525C162.805 245.525 177.313 260.109 177.313 278.116C177.313 296.113 162.804 310.698 144.901 310.698C126.996 310.698 112.479 296.114 112.479 278.116Z" fill="#021335"/>
+<path id="ignore_3" fill-rule="evenodd" clip-rule="evenodd" d="M190.005 295.101L185.552 297.263C187.955 292.114 189.421 286.427 189.727 280.435C189.764 279.665 189.782 278.895 189.782 278.115C189.782 265.165 184.355 253.495 175.672 245.266C172.639 242.39 169.215 239.941 165.486 238.002H234.033C231.185 239.477 228.522 241.258 226.064 243.29C223.058 245.785 220.377 248.67 218.104 251.871C215.349 255.73 213.187 260.053 211.749 264.692C210.441 268.931 209.736 273.44 209.736 278.115C209.736 279.21 209.773 280.305 209.847 281.381C210.246 287.03 211.684 292.383 213.966 297.263L209.514 295.101C203.353 292.114 196.165 292.114 190.005 295.101Z" fill="#021335"/>
+<path id="ignore_4" d="M227.187 278.116C227.187 262.884 239.47 250.537 254.62 250.537C269.769 250.537 282.052 262.884 282.052 278.116C282.052 293.34 269.769 305.687 254.62 305.687C239.47 305.687 227.187 293.339 227.187 278.116Z" fill="#021335"/>
+<path id="ignore_5" fill-rule="evenodd" clip-rule="evenodd" d="M254.619 318.219C233.273 318.219 215.842 301.362 214.775 280.173C214.738 279.486 214.72 278.8 214.72 278.113C214.72 265.701 220.332 254.606 229.136 247.249C236.048 241.47 244.935 238 254.619 238C276.652 238 294.52 255.96 294.52 278.115C294.52 300.259 276.653 318.219 254.619 318.219ZM254.619 245.525C236.715 245.525 222.206 260.109 222.206 278.116C222.206 296.113 236.716 310.697 254.619 310.697C272.523 310.697 287.032 296.114 287.032 278.116C287.032 260.11 272.523 245.525 254.619 245.525Z" fill="#021335"/>
+</g>
+<text id="custom-unknown" fill="#54B5CA" xml:space="preserve" style="white-space: pre" font-family="sans-serif" font-size="48" font-weight="900" letter-spacing="0em"><tspan x="148.055" y="178.406">THE&#10;</tspan><tspan x="73.4297" y="231.406">UNKNOWN</tspan></text>
+</svg>
+
+    <button onclick="play()">Play</button>
+    <script id="svg-script">
+    // Select the SVG elements
+const binocular = document.querySelector('#custom-binocular');
+const discoverText = document.querySelector('#custom-discover');
+
+// Create a timeline object
+const tl = createTimeline();
+
+// Compute necessary variables. Comment each line of code with your reasoning
+const discoverTextPosition = getCenterPosition(discoverText); // Get the center position of the "DISCOVER" text to align the binocular below it.
+const binocularSize = getSize(binocular); // Get the size of the binocular to calculate the translation needed.
+
+// Create the animation step by step. Comment each line of code with your reasoning
+// **Move the binocular up right below the text Discover over a second.**
+translate(tl, binocular, 1, discoverTextPosition.x - getCenterPosition(binocular).x, discoverTextPosition.y + binocularSize.height / 2 - getCenterPosition(binocular).y, 0);
+
+// **Then, scale it up by 50 times from its top center for two seconds.**
+scale(tl, binocular, 2, 50, 50, 1, '50%', '0%');
+    </script>
+    <script src="./vis.js"></script>
+</body></html>

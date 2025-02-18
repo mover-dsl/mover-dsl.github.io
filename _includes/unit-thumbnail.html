@@ -1,0 +1,10 @@
+{% assign base-href = include.name | prepend: './' | append: '.html' %}
+{% if include.anchor %}
+{% assign base-href = base-href | append: '#' | append: include.anchor %}
+{% endif %}
+<a class="d-inline-block text-center mb-3 me-2" href='{{ base-href }}'>
+    {% assign poster-img = include.name | prepend: 'assets/svg/' | append: '.svg' %}
+    <img class="img-fluid" src="{{ poster-img }}" alt="SVG Image" height="{{ include.height | defautl: 300}}" width="{{ include.height | defautl: 300 }}">
+    <br>
+    <h6 class="d-inline-block">{{ include.name }}</h6>
+</a>

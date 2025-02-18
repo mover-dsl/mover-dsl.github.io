@@ -1,0 +1,34 @@
+<div class="row w-100 mt-{{ include.t-margin }} mb-{{ include.b-margin }}">
+    <!-- input video -->
+    <!-- <div class="col-4">
+        {% include unit-input.html %}
+    </div> -->
+        
+    <!-- animation -->
+    <div class="col-6">
+        {% if include.title %}
+            <b>{{ include.title }}</b>
+        {% else %}
+            {% if include.iter == 1 %}
+                <b>Initial animation without correction</b>
+            {% else %}
+                <b>Correction iteration {{ include.iter | minus: 1 }}</b>
+            {% endif %}
+        {% endif %}
+        {% include unit-iframe.html svg-html=include.svg-html %}
+    </div>
+
+    <!-- verification report -->
+    <div class="col-6">
+        {% if include.report-title %}
+            <b>{{ include.report-title }}</b>
+        {% else %}
+            {% if include.iter == 1 %}
+                <b>Verification report</b>
+            {% else %}
+                <b>Verification report of correction iteration {{ include.iter | minus: 1 }}</b>
+            {% endif %}
+        {% endif %}
+        {% include unit-report.html width=include.width height=include.height code=include.code caption=include.caption %}
+    </div>
+</div>
