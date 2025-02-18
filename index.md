@@ -36,7 +36,7 @@ proj-icons:
 
 ## Results
 results-text: >
-    Here we show result animations created by the fully-automated LLM-based generation pipeline. Click on an image below to see the iterations and the final result.
+    Here we show result animations created by our fully-automated LLM-based generation pipeline. Click on an image below to see the iterations and the final result.
     <br><br>
 
 figures-in-paper:
