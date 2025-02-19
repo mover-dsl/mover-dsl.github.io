@@ -69,6 +69,7 @@ human-examples:
 <!-- pipeline figure -->
 {% include fisherman-sub-media.html img="/assets/img/mover_pipeline.png" top-margin=0 width=5 vt-pad=0 %}
 
+
 <!-- results -->
 <div class="row justify-content-center mt-0 pt-0">
     <div class="col-10 col-lg-7 mt-0 pt-0 rubik">
@@ -86,3 +87,6 @@ human-examples:
         {% include thumbnails.html thumbnails=page.human-examples height=200 %}
     </div>
 </div>
+
+{% include fisherman-sub-media.html title-left="Video Walkthrough" video-link="https://www.youtube.com/embed/6sTV8H4opy0?si=J77qUrSrEGR0OOGC" vid-no-shadow="true" top-margin=3 width=7 vt-pad=0 %}
+<div class="mt-5" style="height:10px"></div>
