@@ -6,7 +6,7 @@ title: >
     MoVer: Motion Verification for Motion Graphics Animations
 
 proj-sub: >
-    Anonymous Authors
+    Jiaju Ma, Maneesh Agrawala
 
 sharing-image: ""
 
@@ -25,8 +25,8 @@ summary: >
 proj-icons:
     - name: paper
       fa: fas fa-newspaper
-      link: 
-      full-text: Read the paper (coming soon)
+      link: https://arxiv.org/abs/2502.13372
+      full-text: Read the paper
       short-text: Full paper
     - name: code
       fa: fab fa-github
