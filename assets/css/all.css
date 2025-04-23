@@ -25,3 +25,16 @@ a:hover {
     color: black !important;
     text-decoration: underline;
 }
+
+#iterations-sidebar {
+    position: inherit;
+}
+
+@media (min-width: 992px) {
+    #iterations-sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+    }
+}
