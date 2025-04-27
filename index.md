@@ -6,7 +6,7 @@ title: >
     MoVer: Motion Verification for Motion Graphics Animations
 
 proj-sub: >
-    Jiaju Ma, Maneesh Agrawala
+    Jiaju Ma and Maneesh Agrawala
 
 sharing-image: ""
 
