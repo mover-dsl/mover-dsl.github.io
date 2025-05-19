@@ -1,0 +1,433 @@
+<div class="row justify-content-center mt-0 pt-0">
+    <div class="col-10 col-lg-7 mt-0 pt-0 rubik" style="overflow-x: auto;">
+        <table class="ltx_tabular ltx_centering ltx_align_middle" style="font-size: 0.9em;">
+            <tbody class="ltx_tbody">
+                <tr class="ltx_tr">
+                    <td class="ltx_td ltx_align_left" colspan="4"><span class="ltx_text ltx_font_bold">o3-mini</span>
+                    </td>
+                    <td class="ltx_td"></td>
+                    <td class="ltx_td"></td>
+                </tr>
+                <tr class="ltx_tr">
+                    <td class="ltx_td ltx_align_left ltx_border_tt" rowspan="2"></td>
+                    <td class="ltx_td ltx_align_center ltx_border_tt" colspan="5">Prompt Type</td>
+                </tr>
+                <tr class="ltx_tr">
+                    <td class="ltx_td ltx_align_right ltx_border_t">
+                        <table class="ltx_tabular ltx_align_middle">
+                            <tr class="ltx_tr">
+                                <td class="ltx_td ltx_nopad_r ltx_align_center">Single</td>
+                            </tr>
+                            <tr class="ltx_tr">
+                                <td class="ltx_td ltx_nopad_r ltx_align_center">atomic</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td class="ltx_td ltx_align_right ltx_border_t">
+                        <table class="ltx_tabular ltx_align_middle">
+                            <tr class="ltx_tr">
+                                <td class="ltx_td ltx_nopad_r ltx_align_center">Spatially</td>
+                            </tr>
+                            <tr class="ltx_tr">
+                                <td class="ltx_td ltx_nopad_r ltx_align_center">relative</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td class="ltx_td ltx_align_right ltx_border_t">
+                        <table class="ltx_tabular ltx_align_middle">
+                            <tr class="ltx_tr">
+                                <td class="ltx_td ltx_nopad_r ltx_align_center">Temporally</td>
+                            </tr>
+                            <tr class="ltx_tr">
+                                <td class="ltx_td ltx_nopad_r ltx_align_center">relative</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td class="ltx_td ltx_align_right ltx_border_t">
+                        <table class="ltx_tabular ltx_align_middle">
+                            <tr class="ltx_tr">
+                                <td class="ltx_td ltx_nopad_r ltx_align_center">Spatio-</td>
+                            </tr>
+                            <tr class="ltx_tr">
+                                <td class="ltx_td ltx_nopad_r ltx_align_center">temporally</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td class="ltx_td ltx_align_center ltx_border_l ltx_border_t">Overall</td>
+                </tr>
+                <tr class="ltx_tr">
+                    <td class="ltx_td ltx_align_left ltx_border_t">pass@0</td>
+                    <td class="ltx_td ltx_align_right ltx_border_t">1124 (93.7%)</td>
+                    <td class="ltx_td ltx_align_right ltx_border_t">712 (50.9%)</td>
+                    <td class="ltx_td ltx_align_right ltx_border_t">1079 (89.9%)</td>
+                    <td class="ltx_td ltx_align_right ltx_border_t">783 (43.5%)</td>
+                    <td class="ltx_td ltx_align_right ltx_border_l ltx_border_t">3698 (66.0%)</td>
+                </tr>
+                <tr class="ltx_tr">
+                    <td class="ltx_td ltx_align_left">pass@1+</td>
+                    <td class="ltx_td ltx_align_right">76 (6.3%)</td>
+                    <td class="ltx_td ltx_align_right">668 (47.7%)</td>
+                    <td class="ltx_td ltx_align_right">118 (9.8%)</td>
+                    <td class="ltx_td ltx_align_right">960 (53.3%)</td>
+                    <td class="ltx_td ltx_align_right ltx_border_l">1822 (32.5%)</td>
+                </tr>
+                <tr class="ltx_tr">
+                    <td class="ltx_td ltx_align_left">fail</td>
+                    <td class="ltx_td ltx_align_right">0 (0.0%)</td>
+                    <td class="ltx_td ltx_align_right">20 (1.4%)</td>
+                    <td class="ltx_td ltx_align_right">3 (0.3%)</td>
+                    <td class="ltx_td ltx_align_right">57 (3.2%)</td>
+                    <td class="ltx_td ltx_align_right ltx_border_l">80 (1.4%)</td>
+                </tr>
+                <tr class="ltx_tr">
+                    <td class="ltx_td ltx_align_left ltx_border_t">avg. iters.</td>
+                    <td class="ltx_td ltx_align_right ltx_border_t">1.13 (1-2)</td>
+                    <td class="ltx_td ltx_align_right ltx_border_t">6.1 (1-38)</td>
+                    <td class="ltx_td ltx_align_right ltx_border_t">2.0 (1-32)</td>
+                    <td class="ltx_td ltx_align_right ltx_border_t">7.9 (1-38)</td>
+                    <td class="ltx_td ltx_align_right ltx_border_l ltx_border_t">6.5 (1-38)</td>
+                </tr>
+                <tr class="ltx_tr">
+                    <td class="ltx_td ltx_align_left ltx_border_tt" colspan="4"><span
+                            class="ltx_text ltx_font_bold"><br><br>GPT-4o</span></td>
+                    <td class="ltx_td ltx_border_tt"></td>
+                    <td class="ltx_td ltx_border_tt"></td>
+                </tr>
+                <tr class="ltx_tr">
+                    <td class="ltx_td ltx_align_left ltx_border_tt" rowspan="2"></td>
+                    <td class="ltx_td ltx_align_center ltx_border_tt" colspan="5">Prompt Type</td>
+                </tr>
+                <tr class="ltx_tr">
+                    <td class="ltx_td ltx_align_right ltx_border_t">
+                        <table class="ltx_tabular ltx_align_middle">
+                            <tr class="ltx_tr">
+                                <td class="ltx_td ltx_nopad_r ltx_align_center">Single</td>
+                            </tr>
+                            <tr class="ltx_tr">
+                                <td class="ltx_td ltx_nopad_r ltx_align_center">atomic</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td class="ltx_td ltx_align_right ltx_border_t">
+                        <table class="ltx_tabular ltx_align_middle">
+                            <tr class="ltx_tr">
+                                <td class="ltx_td ltx_nopad_r ltx_align_center">Spatially</td>
+                            </tr>
+                            <tr class="ltx_tr">
+                                <td class="ltx_td ltx_nopad_r ltx_align_center">relative</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td class="ltx_td ltx_align_right ltx_border_t">
+                        <table class="ltx_tabular ltx_align_middle">
+                            <tr class="ltx_tr">
+                                <td class="ltx_td ltx_nopad_r ltx_align_center">Temporally</td>
+                            </tr>
+                            <tr class="ltx_tr">
+                                <td class="ltx_td ltx_nopad_r ltx_align_center">relative</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td class="ltx_td ltx_align_right ltx_border_t">
+                        <table class="ltx_tabular ltx_align_middle">
+                            <tr class="ltx_tr">
+                                <td class="ltx_td ltx_nopad_r ltx_align_center">Spatio-</td>
+                            </tr>
+                            <tr class="ltx_tr">
+                                <td class="ltx_td ltx_nopad_r ltx_align_center">temporally</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td class="ltx_td ltx_align_center ltx_border_l ltx_border_t">Overall</td>
+                </tr>
+                <tr class="ltx_tr">
+                    <td class="ltx_td ltx_align_left ltx_border_t">pass@0</td>
+                    <td class="ltx_td ltx_align_right ltx_border_t">1060 (88.3%)</td>
+                    <td class="ltx_td ltx_align_right ltx_border_t">530 (37.9%)</td>
+                    <td class="ltx_td ltx_align_right ltx_border_t">1062 (88.5%)</td>
+                    <td class="ltx_td ltx_align_right ltx_border_t">640 (35.6%)</td>
+                    <td class="ltx_td ltx_align_right ltx_border_l ltx_border_t">3292 (58.8%)</td>
+                </tr>
+                <tr class="ltx_tr">
+                    <td class="ltx_td ltx_align_left">pass@1+</td>
+                    <td class="ltx_td ltx_align_right">136 (11.3%)</td>
+                    <td class="ltx_td ltx_align_right">718 (51.3%)</td>
+                    <td class="ltx_td ltx_align_right">134 (11.2%)</td>
+                    <td class="ltx_td ltx_align_right">962 (53.4%)</td>
+                    <td class="ltx_td ltx_align_right ltx_border_l">1950 (34.8%)</td>
+                </tr>
+                <tr class="ltx_tr">
+                    <td class="ltx_td ltx_align_left">fail</td>
+                    <td class="ltx_td ltx_align_right">4 (0.3%)</td>
+                    <td class="ltx_td ltx_align_right">152 (10.9%)</td>
+                    <td class="ltx_td ltx_align_right">4 (0.3%)</td>
+                    <td class="ltx_td ltx_align_right">198 (11.0%)</td>
+                    <td class="ltx_td ltx_align_right ltx_border_l">358 (6.4%)</td>
+                </tr>
+                <tr class="ltx_tr">
+                    <td class="ltx_td ltx_align_left ltx_border_t">avg. iters.</td>
+                    <td class="ltx_td ltx_align_right ltx_border_t">1.1 (1-5)</td>
+                    <td class="ltx_td ltx_align_right ltx_border_t">6.2 (1-34)</td>
+                    <td class="ltx_td ltx_align_right ltx_border_t">1.8 (1-12)</td>
+                    <td class="ltx_td ltx_align_right ltx_border_t">6.7 (1-38)</td>
+                    <td class="ltx_td ltx_align_right ltx_border_l ltx_border_t">5.8 (1-38)</td>
+                </tr>
+                <tr class="ltx_tr">
+                    <td class="ltx_td ltx_align_left ltx_border_tt" colspan="4"><span
+                            class="ltx_text ltx_font_bold"><br><br>Llama 3.3 70B</span></td>
+                    <td class="ltx_td ltx_border_tt"></td>
+                    <td class="ltx_td ltx_border_tt"></td>
+                </tr>
+                <tr class="ltx_tr">
+                    <td class="ltx_td ltx_align_left ltx_border_tt" rowspan="2"></td>
+                    <td class="ltx_td ltx_align_center ltx_border_tt" colspan="5">Prompt Type</td>
+                </tr>
+                <tr class="ltx_tr">
+                    <td class="ltx_td ltx_align_right ltx_border_t">
+                        <table class="ltx_tabular ltx_align_middle">
+                            <tr class="ltx_tr">
+                                <td class="ltx_td ltx_nopad_r ltx_align_center">Single</td>
+                            </tr>
+                            <tr class="ltx_tr">
+                                <td class="ltx_td ltx_nopad_r ltx_align_center">atomic</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td class="ltx_td ltx_align_right ltx_border_t">
+                        <table class="ltx_tabular ltx_align_middle">
+                            <tr class="ltx_tr">
+                                <td class="ltx_td ltx_nopad_r ltx_align_center">Spatially</td>
+                            </tr>
+                            <tr class="ltx_tr">
+                                <td class="ltx_td ltx_nopad_r ltx_align_center">relative</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td class="ltx_td ltx_align_right ltx_border_t">
+                        <table class="ltx_tabular ltx_align_middle">
+                            <tr class="ltx_tr">
+                                <td class="ltx_td ltx_nopad_r ltx_align_center">Temporally</td>
+                            </tr>
+                            <tr class="ltx_tr">
+                                <td class="ltx_td ltx_nopad_r ltx_align_center">relative</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td class="ltx_td ltx_align_right ltx_border_t">
+                        <table class="ltx_tabular ltx_align_middle">
+                            <tr class="ltx_tr">
+                                <td class="ltx_td ltx_nopad_r ltx_align_center">Spatio-</td>
+                            </tr>
+                            <tr class="ltx_tr">
+                                <td class="ltx_td ltx_nopad_r ltx_align_center">temporally</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td class="ltx_td ltx_align_center ltx_border_l ltx_border_t">Overall</td>
+                </tr>
+                <tr class="ltx_tr">
+                    <td class="ltx_td ltx_align_left ltx_border_t">pass@0</td>
+                    <td class="ltx_td ltx_align_right ltx_border_t">946 (78.8%)</td>
+                    <td class="ltx_td ltx_align_right ltx_border_t">700 (50.0%)</td>
+                    <td class="ltx_td ltx_align_right ltx_border_t">933 (77.8%)</td>
+                    <td class="ltx_td ltx_align_right ltx_border_t">768 (42.7%)</td>
+                    <td class="ltx_td ltx_align_right ltx_border_l ltx_border_t">3347 (59.8%)</td>
+                </tr>
+                <tr class="ltx_tr">
+                    <td class="ltx_td ltx_align_left">pass@1+</td>
+                    <td class="ltx_td ltx_align_right">249 (20.8%)</td>
+                    <td class="ltx_td ltx_align_right">577 (41.2%)</td>
+                    <td class="ltx_td ltx_align_right">259 (21.6%)</td>
+                    <td class="ltx_td ltx_align_right">702 (39.0%)</td>
+                    <td class="ltx_td ltx_align_right ltx_border_l">1787 (32.0%)</td>
+                </tr>
+                <tr class="ltx_tr">
+                    <td class="ltx_td ltx_align_left">fail</td>
+                    <td class="ltx_td ltx_align_right">5 (0.4%)</td>
+                    <td class="ltx_td ltx_align_right">123 (8.8%)</td>
+                    <td class="ltx_td ltx_align_right">8 (0.7%)</td>
+                    <td class="ltx_td ltx_align_right">330 (18.3%)</td>
+                    <td class="ltx_td ltx_align_right ltx_border_l">466 (8.3%)</td>
+                </tr>
+                <tr class="ltx_tr">
+                    <td class="ltx_td ltx_align_left ltx_border_t">avg. iters.</td>
+                    <td class="ltx_td ltx_align_right ltx_border_t">2.0 (1-12)</td>
+                    <td class="ltx_td ltx_align_right ltx_border_t">3.6 (1-44)</td>
+                    <td class="ltx_td ltx_align_right ltx_border_t">2.1 (1-21)</td>
+                    <td class="ltx_td ltx_align_right ltx_border_t">4.0 (1-37)</td>
+                    <td class="ltx_td ltx_align_right ltx_border_l ltx_border_t">3.3 (1-37)</td>
+                </tr>
+                <tr class="ltx_tr">
+                    <td class="ltx_td ltx_align_left ltx_border_tt" colspan="4"><span
+                            class="ltx_text ltx_font_bold"><br><br>Gemini 2.0 Flash</span></td>
+                    <td class="ltx_td ltx_border_tt"></td>
+                    <td class="ltx_td ltx_border_tt"></td>
+                </tr>
+                <tr class="ltx_tr">
+                    <td class="ltx_td ltx_align_left ltx_border_tt" rowspan="2"></td>
+                    <td class="ltx_td ltx_align_center ltx_border_tt" colspan="5">Prompt Type</td>
+                </tr>
+                <tr class="ltx_tr">
+                    <td class="ltx_td ltx_align_right ltx_border_t">
+                        <table class="ltx_tabular ltx_align_middle">
+                            <tr class="ltx_tr">
+                                <td class="ltx_td ltx_nopad_r ltx_align_center">Single</td>
+                            </tr>
+                            <tr class="ltx_tr">
+                                <td class="ltx_td ltx_nopad_r ltx_align_center">atomic</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td class="ltx_td ltx_align_right ltx_border_t">
+                        <table class="ltx_tabular ltx_align_middle">
+                            <tr class="ltx_tr">
+                                <td class="ltx_td ltx_nopad_r ltx_align_center">Spatially</td>
+                            </tr>
+                            <tr class="ltx_tr">
+                                <td class="ltx_td ltx_nopad_r ltx_align_center">relative</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td class="ltx_td ltx_align_right ltx_border_t">
+                        <table class="ltx_tabular ltx_align_middle">
+                            <tr class="ltx_tr">
+                                <td class="ltx_td ltx_nopad_r ltx_align_center">Temporally</td>
+                            </tr>
+                            <tr class="ltx_tr">
+                                <td class="ltx_td ltx_nopad_r ltx_align_center">relative</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td class="ltx_td ltx_align_right ltx_border_t">
+                        <table class="ltx_tabular ltx_align_middle">
+                            <tr class="ltx_tr">
+                                <td class="ltx_td ltx_nopad_r ltx_align_center">Spatio-</td>
+                            </tr>
+                            <tr class="ltx_tr">
+                                <td class="ltx_td ltx_nopad_r ltx_align_center">temporally</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td class="ltx_td ltx_align_center ltx_border_l ltx_border_t">Overall</td>
+                </tr>
+                <tr class="ltx_tr">
+                    <td class="ltx_td ltx_align_left ltx_border_t">pass@0</td>
+                    <td class="ltx_td ltx_align_right ltx_border_t">1101 (91.8%)</td>
+                    <td class="ltx_td ltx_align_right ltx_border_t">660 (47.1%)</td>
+                    <td class="ltx_td ltx_align_right ltx_border_t">827 (68.9%)</td>
+                    <td class="ltx_td ltx_align_right ltx_border_t">772 (42.9%)</td>
+                    <td class="ltx_td ltx_align_right ltx_border_l ltx_border_t">3360 (60.0%)</td>
+                </tr>
+                <tr class="ltx_tr">
+                    <td class="ltx_td ltx_align_left">pass@1+</td>
+                    <td class="ltx_td ltx_align_right">56 (4.7%)</td>
+                    <td class="ltx_td ltx_align_right">586 (41.9%)</td>
+                    <td class="ltx_td ltx_align_right">335 (27.9%)</td>
+                    <td class="ltx_td ltx_align_right">698 (38.8%)</td>
+                    <td class="ltx_td ltx_align_right ltx_border_l">1675 (29.9%)</td>
+                </tr>
+                <tr class="ltx_tr">
+                    <td class="ltx_td ltx_align_left">fail</td>
+                    <td class="ltx_td ltx_align_right">43 (3.6%)</td>
+                    <td class="ltx_td ltx_align_right">154 (11.0%)</td>
+                    <td class="ltx_td ltx_align_right">38 (3.2%)</td>
+                    <td class="ltx_td ltx_align_right">330 (18.3%)</td>
+                    <td class="ltx_td ltx_align_right ltx_border_l">565 (10.1%)</td>
+                </tr>
+                <tr class="ltx_tr">
+                    <td class="ltx_td ltx_align_left ltx_border_t">avg. iters.</td>
+                    <td class="ltx_td ltx_align_right ltx_border_t">3.5 (1-35)</td>
+                    <td class="ltx_td ltx_align_right ltx_border_t">4.1 (1-46)</td>
+                    <td class="ltx_td ltx_align_right ltx_border_t">2.4 (1-21)</td>
+                    <td class="ltx_td ltx_align_right ltx_border_t">4.4 (1-48)</td>
+                    <td class="ltx_td ltx_align_right ltx_border_l ltx_border_t">3.9 (1-48)</td>
+                </tr>
+                <tr class="ltx_tr">
+                    <td class="ltx_td ltx_align_left ltx_border_tt" colspan="4"><span
+                            class="ltx_text ltx_font_bold"><br><br>Llama 3.1 8B</span></td>
+                    <td class="ltx_td ltx_border_tt"></td>
+                    <td class="ltx_td ltx_border_tt"></td>
+                </tr>
+                <tr class="ltx_tr">
+                    <td class="ltx_td ltx_align_left ltx_border_tt" rowspan="2"></td>
+                    <td class="ltx_td ltx_align_center ltx_border_tt" colspan="5">Prompt Type</td>
+                </tr>
+                <tr class="ltx_tr">
+                    <td class="ltx_td ltx_align_right ltx_border_t">
+                        <table class="ltx_tabular ltx_align_middle">
+                            <tr class="ltx_tr">
+                                <td class="ltx_td ltx_nopad_r ltx_align_center">Single</td>
+                            </tr>
+                            <tr class="ltx_tr">
+                                <td class="ltx_td ltx_nopad_r ltx_align_center">atomic</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td class="ltx_td ltx_align_right ltx_border_t">
+                        <table class="ltx_tabular ltx_align_middle">
+                            <tr class="ltx_tr">
+                                <td class="ltx_td ltx_nopad_r ltx_align_center">Spatially</td>
+                            </tr>
+                            <tr class="ltx_tr">
+                                <td class="ltx_td ltx_nopad_r ltx_align_center">relative</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td class="ltx_td ltx_align_right ltx_border_t">
+                        <table class="ltx_tabular ltx_align_middle">
+                            <tr class="ltx_tr">
+                                <td class="ltx_td ltx_nopad_r ltx_align_center">Temporally</td>
+                            </tr>
+                            <tr class="ltx_tr">
+                                <td class="ltx_td ltx_nopad_r ltx_align_center">relative</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td class="ltx_td ltx_align_right ltx_border_t">
+                        <table class="ltx_tabular ltx_align_middle">
+                            <tr class="ltx_tr">
+                                <td class="ltx_td ltx_nopad_r ltx_align_center">Spatio-</td>
+                            </tr>
+                            <tr class="ltx_tr">
+                                <td class="ltx_td ltx_nopad_r ltx_align_center">temporally</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td class="ltx_td ltx_align_center ltx_border_l ltx_border_t">Overall</td>
+                </tr>
+                <tr class="ltx_tr">
+                    <td class="ltx_td ltx_align_left ltx_border_t">pass@0</td>
+                    <td class="ltx_td ltx_align_right ltx_border_t">452 (37.7%)</td>
+                    <td class="ltx_td ltx_align_right ltx_border_t">366 (26.1%)</td>
+                    <td class="ltx_td ltx_align_right ltx_border_t">344 (28.7%)</td>
+                    <td class="ltx_td ltx_align_right ltx_border_t">218 (12.1%)</td>
+                    <td class="ltx_td ltx_align_right ltx_border_l ltx_border_t">1380 (24.6%)</td>
+                </tr>
+                <tr class="ltx_tr">
+                    <td class="ltx_td ltx_align_left">pass@1+</td>
+                    <td class="ltx_td ltx_align_right">235 (19.6%)</td>
+                    <td class="ltx_td ltx_align_right">333 (23.8%)</td>
+                    <td class="ltx_td ltx_align_right">204 (17.0%)</td>
+                    <td class="ltx_td ltx_align_right">129 (7.2%)</td>
+                    <td class="ltx_td ltx_align_right ltx_border_l">901 (16.1%)</td>
+                </tr>
+                <tr class="ltx_tr">
+                    <td class="ltx_td ltx_align_left">fail</td>
+                    <td class="ltx_td ltx_align_right">513 (42.8%)</td>
+                    <td class="ltx_td ltx_align_right">701 (50.1%)</td>
+                    <td class="ltx_td ltx_align_right">652 (54.3%)</td>
+                    <td class="ltx_td ltx_align_right">1453 (80.7%)</td>
+                    <td class="ltx_td ltx_align_right ltx_border_l">3319 (59.3%)</td>
+                </tr>
+                <tr class="ltx_tr">
+                    <td class="ltx_td ltx_align_left ltx_border_bb ltx_border_t">avg. iters.</td>
+                    <td class="ltx_td ltx_align_right ltx_border_bb ltx_border_t">3.8 (1-44)</td>
+                    <td class="ltx_td ltx_align_right ltx_border_bb ltx_border_t">4.7 (1-48)</td>
+                    <td class="ltx_td ltx_align_right ltx_border_bb ltx_border_t">3.9 (1-20)</td>
+                    <td class="ltx_td ltx_align_right ltx_border_bb ltx_border_t">5.6 (1-48)</td>
+                    <td class="ltx_td ltx_align_right ltx_border_bb ltx_border_l ltx_border_t">4.4 (1-48)</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

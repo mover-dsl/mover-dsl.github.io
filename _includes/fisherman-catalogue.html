@@ -1,0 +1,20 @@
+<!-- Index -->
+<div {% if include.id %}id="{{ include.id }}"{% endif %} class="py-5 banner-box mt-4">
+  <!-- Index text -->
+  <div class="row justify-content-center">
+    <div class="col-10 col-lg-7 rubik line-spacing">
+      <div class="row">
+        <div class="col-12 col-lg-7 align-self-center">
+          <h4 class="py-3">{{ include.title }}</h4>
+        </div>
+        <div class="col-12 col-lg-5 text-left">
+            {% for item in include.items %}
+            <p><a href="#{{ item.title | downcase | split: ' ' | join: '-' }}">
+                <span {% if item.highlight %}class="cat-highlight"{% endif %}>{{ item.title }}</span>
+            </a></p>
+            {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
