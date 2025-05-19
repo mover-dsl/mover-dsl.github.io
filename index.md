@@ -69,7 +69,7 @@ human-examples:
 
 ## Table caption
 table-caption: >
-    Here we show performances of our LLM-based synthesis and verification pipeline on our dataset with 5600 motion graphics prompts with different LLMs. We report the number that requires 0 correction iterations (pass@0), the number that requires 1 to 49 iterations (pass@1+), and the number that fails after 49 iterations. We report the average number of iterations and their min-max ranges for the pass@1+ prompts. We exclude failed prompts from these metrics. <i>We sort the models below by the overall fail rate (lower is better).</i>
+    Here we show performances of our LLM-based synthesis and verification pipeline on our dataset with 5600 motion graphics prompts with different LLMs. We report the number that requires 0 correction iterations (pass@0), the number that requires 1 to 49 iterations (pass@1+), and the number that fails after 49 iterations. We report the average number of iterations and their min-max ranges for the pass@1+ prompts. We exclude failed prompts from these metrics. We sort the models below by the overall fail rate (lower is better). <i>We thank <a href="https://lukewys.github.io/" target="_blank"><b>Yusong Wu</b></a> for helping with running the experiments.</i>
 ---
 
 <!-- landing -->
