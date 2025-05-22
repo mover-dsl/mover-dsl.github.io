@@ -9,8 +9,7 @@ title: >
     MoVer: Motion Verification for Motion Graphics Animations
 
 proj-sub: >
-    Jiaju Ma and Maneesh Agrawala
-    
+    <a href="https://majiaju.io" target="_blank">Jiaju Ma</a> and <a href="http://graphics.stanford.edu/~maneesh/" target="_blank">Maneesh Agrawala</a>
 sharing-image: ""
 
 description: >
