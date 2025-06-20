@@ -32,8 +32,8 @@ proj-icons:
       short-text: Full paper
     - name: code
       fa: fab fa-github
-      link: 
-      full-text: Code and dataset (coming soon)
+      link: https://github.com/jama1017/MoVer
+      full-text: Code and dataset
       short-text: Code and dataset
       
 ## Main catalogue
