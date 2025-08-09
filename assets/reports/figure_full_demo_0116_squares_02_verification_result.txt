@@ -10,11 +10,11 @@ o_3 = all(Object, lambda o: color(o, "blue") and shape(o, "square")): True
 color: True
 shape: True
 
-o_4 = all(Object, lambda o: color(o, "black") and shape(o, "square")): True
+o_4 = all(Object, lambda o: color(o, "white") and shape(o, "square")): True
 color: True
 shape: True
 
-o_5 = all(Object, lambda o: color(o, "purple") and shape(o, "square")): True
+o_5 = all(Object, lambda o: color(o, "pink") and shape(o, "square")): True
 color: True
 shape: True
 

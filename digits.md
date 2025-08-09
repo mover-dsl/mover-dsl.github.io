@@ -5,14 +5,14 @@ layout: page-layout
 svg: digits.svg
 
 prompt: >
-    Translate the green squares and the yellow squares to the right by 100 px. At the same time, rotate the blue squares around the point (250, 100) by -90 degrees. Simultaneously, rotate the black squares around the point (250, 300) by 90 degrees. Afterwards, reverse the rotations of the blacks squares and the blue squares, and also reverse the translation of the green squares. At the same time, rotate the purple squares around the point (250,200) by 90 degrees. Finally, move the green squares to the right by 100 px.
+    Translate the green squares and the yellow squares to the right by 100 px. At the same time, rotate the blue squares around the point (250, 100) by -90 degrees. Simultaneously, rotate the white squares around the point (250, 300) by 90 degrees. Afterwards, reverse the rotations of the white squares and the blue squares, and also reverse the translation of the green squares. At the same time, rotate the purple squares around the point (250,200) by 90 degrees. Finally, move the green squares to the right by 100 px.
 
 program: |
     o_1 = all(Object, lambda o: color(o, "green") and shape(o, "square"))
     o_2 = all(Object, lambda o: color(o, "yellow") and shape(o, "square"))
     o_3 = all(Object, lambda o: color(o, "blue") and shape(o, "square"))
-    o_4 = all(Object, lambda o: color(o, "black") and shape(o, "square"))
-    o_5 = all(Object, lambda o: color(o, "purple") and shape(o, "square"))
+    o_4 = all(Object, lambda o: color(o, "white") and shape(o, "square"))
+    o_5 = all(Object, lambda o: color(o, "pink") and shape(o, "square"))
 
     m_1 = iota(Motion, lambda m: type(m, "translate") and direction(m, [1.0, 0.0]) and magnitude(m, 100.0) and agent(m, o_1))
     m_2 = iota(Motion, lambda m: type(m, "translate") and direction(m, [1.0, 0.0]) and magnitude(m, 100.0) and agent(m, o_2))
