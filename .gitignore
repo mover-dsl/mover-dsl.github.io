@@ -24,4 +24,4 @@ vendor
 # assets/svg_html/vis.js
 # assets/svg_html/index.css
 # assets/dataset/*
-assets/video/*
+# assets/video/*
