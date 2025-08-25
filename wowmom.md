@@ -20,7 +20,7 @@ program: |
     t_before(m_1, m_2)
     t_before(m_2, m_3)
 
-# video: assets/video/wowmom.mp4
+video: https://vimeo.com/1085775168#t=3m1s
 
 iterations:
     -   name: 'Iteration 1'

@@ -2,9 +2,13 @@
 {% if include.anchor %}
 {% assign base-href = base-href | append: '#' | append: include.anchor %}
 {% endif %}
-<a class="d-inline-block text-center mb-3 me-2" href='{{ base-href }}'>
-    {% assign poster-img = include.name | prepend: 'assets/svg/' | append: '.svg' %}
-    <img class="img-fluid" src="{{ poster-img }}" alt="SVG Image" height="{{ include.height | defautl: 300}}" width="{{ include.height | defautl: 300 }}">
-    <br>
-    <h6 class="d-inline-block">{{ include.name }}</h6>
-</a>
+<div class="col-12 col-lg-3 m-0 text-center">
+    <a href='{{ base-href }}'>
+        {% assign poster-img = include.name | prepend: 'assets/svg/' | append: '.svg' %}
+        {% assign video-file = include.name | prepend: 'assets/video/' | append: '.mp4' %}
+        <div class="embed-responsive embed-responsive-1by1">
+            <video class="img-fluid" src="{{ video-file }}" alt="SVG Image" poster="{{ poster-img }}" autoplay loop muted playsinline></video>
+        </div>
+        <p>{{ include.name }}</p>
+    </a>
+</div>

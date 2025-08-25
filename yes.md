@@ -17,7 +17,7 @@ program: |
 
     t_before (m_1, m_2)
 
-# video: assets/video/yes.mp4
+video: https://vimeo.com/1085775168#t=0m23s
 
 iterations:
     -   name: 'Iteration 1'
