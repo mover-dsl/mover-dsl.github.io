@@ -1,0 +1,120 @@
+o_1 = iota(Object, lambda o: color(o, "white") and shape(o, "circle")): True
+color: True
+shape: True
+
+o_2 = iota(Object, lambda o: color(o, "blue") and shape(o, "circle")): True
+color: True
+shape: True
+
+o_3 = iota(Object, lambda o: color(o, "black") and shape(o, "circle")): True
+color: True
+shape: True
+
+m_1 = iota(Motion, lambda m: type(m, "scale") and direction(m, [0.0, -1.0]) and magnitude(m, [0.0, 0.1]) and origin(m, ["50%", "50%"]) and duration(m, 0.6) and agent(m, o_1)): True
+type: True
+direction: True
+magnitude: True
+origin: True
+duration: True
+agent: True
+
+m_2 = iota(Motion, lambda m: type(m, "scale") and direction(m, [0.0, 1.0]) and origin(m, ["50%", "50%"]) and agent(m, o_1)): True
+type: True
+direction: True
+origin: True
+agent: True
+
+m_3 = iota(Motion, lambda m: type(m, "scale") and direction(m, [0.0, -1.0]) and magnitude(m, [0.0, 0.1]) and origin(m, ["50%", "50%"]) and agent(m, o_1) and (not m_1)): True
+type: True
+direction: True
+magnitude: True
+origin: True
+agent: True
+
+m_4 = iota(Motion, lambda m: type(m, "scale") and direction(m, [0.0, 1.0]) and origin(m, ["50%", "50%"]) and agent(m, o_1) and (not m_2)): True
+type: True
+direction: True
+origin: True
+agent: True
+
+m_5 = iota(Motion, lambda m: type(m, "translate") and post(m, s_left_border(o_2, o_1)) and agent(m, o_2)): True
+type: True
+post: True
+s_left_border: True
+agent: True
+
+m_6 = iota(Motion, lambda m: type(m, "translate") and post(m, s_left_border(o_3, o_1)) and agent(m, o_3)): True
+type: True
+post: True
+s_left_border: True
+agent: True
+
+m_7 = iota(Motion, lambda m: type(m, "translate") and post(m, s_right_border(o_2, o_1)) and agent(m, o_2)): True
+type: True
+post: True
+s_right_border: True
+agent: True
+
+m_8 = iota(Motion, lambda m: type(m, "translate") and post(m, s_right_border(o_3, o_1)) and agent(m, o_3)): True
+type: True
+post: True
+s_right_border: True
+agent: True
+
+m_9 = iota(Motion, lambda m: type(m, "translate") and (not post(m, s_border(o_2, o_1))) and agent(m, o_2) and (not m_5) and (not m_7)): False
+type: True
+post: True
+s_border: True
+agent: True
+
+m_10 = iota(Motion, lambda m: type(m, "translate") and (not post(m, s_border(o_3, o_1))) and agent(m, o_3) and (not m_6) and (not m_8)): False
+type: True
+post: True
+s_border: True
+agent: True
+
+m_11 = iota(Motion, lambda m: type(m, "scale") and direction(m, [0.0, -1.0]) and magnitude(m, [0.0, 0.1]) and origin(m, ["50%", "50%"]) and agent(m, o_1) and (not m_1) and (not m_3)): True
+type: True
+direction: True
+magnitude: True
+origin: True
+agent: True
+
+m_12 = iota(Motion, lambda m: type(m, "scale") and direction(m, [0.0, 1.0]) and origin(m, ["50%", "50%"]) and agent(m, o_1) and (not m_2) and (not m_4)): True
+type: True
+direction: True
+origin: True
+agent: True
+
+t_before(m_1, m_2): True
+t_before: True
+
+t_before(m_2, m_3): True
+t_before: True
+
+t_before(m_3, m_4): True
+t_before: True
+
+t_before(m_4, m_5): True
+t_before: True
+
+t_while(m_5, m_6): True
+t_while: True
+
+t_before(m_6, m_7): True
+t_before: True
+
+t_while(m_7, m_8): True
+t_while: True
+
+t_before(m_8, m_9): False
+t_before: False
+
+t_while(m_9, m_10): False
+t_while: False
+
+t_before(m_10, m_11): False
+t_before: False
+
+t_before(m_11, m_12): True
+t_before: True

@@ -5,7 +5,7 @@ layout: page-layout
 svg: wowmom.svg
 
 prompt: >
-    Rotate the first letter W around the pink circle by 180 degrees. Then rotate the second letter W the same way. Finally, move the letter O down so that its bottom align with the rotated letter W
+    Rotate the first letter W around the pink circle by 180 degrees. Then rotate the second letter W the same way. Finally, move the letter O down so that its bottom align with the rotated letter W.
 
 program: |
     o_1 = iota(Object, lambda o: id(o, "letter-w-1"))

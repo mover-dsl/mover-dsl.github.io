@@ -56,8 +56,9 @@ figures-in-paper:
     - name: 'haha'
 
 example-results:
-    - name: 'sneaker'
+    - name: 'eye'
     - name: 'deconstruct'
+    - name: 'sneaker'
     - name: 'discover'
     - name: 'digits'
     - name: 'target'

@@ -1,0 +1,9 @@
+<svg width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="400" height="400" fill="#FF6958"/>
+    <circle id="white-circle" cx="200" cy="200" r="200" fill="white"/>
+    <mask id="ignore" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="400" height="400">
+        <use href="#white-circle"/>
+    </mask>
+    <circle id="blue-circle" cx="200" cy="200" r="104" fill="#54B5CA" mask="url(#ignore)"/>
+    <circle id="black-circle" cx="200" cy="200" r="49" fill="#070210" mask="url(#ignore)"/>
+</svg>
