@@ -30,6 +30,10 @@ a:hover {
     position: inherit;
 }
 
+#back-to-all-results {
+    background-color: #F2F2EA;
+}
+
 @media (min-width: 992px) {
     #iterations-sidebar {
         position: fixed;
