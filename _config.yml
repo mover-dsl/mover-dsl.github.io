@@ -23,7 +23,7 @@ email:
 description: >- # this means to ignore newlines until "baseurl:"
   Project website of MoVer, a DSL for motion verification of motion graphics animations.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://mover-dsl.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://mover-dsl.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: 
 # github_username:  jekyll
 

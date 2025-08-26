@@ -6,10 +6,7 @@ css:
     - ltx-article
 
 title: > 
-    MoVer: Motion Verification for Motion Graphics Animations
-
-proj-sub: >
-    <a href="https://majiaju.io" target="_blank">Jiaju Ma</a> and <a href="http://graphics.stanford.edu/~maneesh/" target="_blank">Maneesh Agrawala</a>
+    {{ site.data.work[page.proj-name].title }}
 
 sharing-image: https://mover-dsl.github.io/assets/img/mover_teaser.png
 
@@ -96,7 +93,10 @@ bibtex: |
 ---
 
 <!-- landing -->
-{% include fisherman-landing.html title=page.title subtitle=page.proj-sub cover-vid-link=page.cover-vid-link col-width=7 outer-class="mb-5" conference=page.conference video-style="border: 0.5px solid #000;" %}
+{% capture proj-title %}{{ site.data.work[page.proj-name].title }}{% endcapture %}
+{% capture proj-sub %}{{ site.data.work[page.proj-name].authors }}{% endcapture %}
+
+{% include fisherman-landing.html title=proj-title subtitle=proj-sub cover-vid-link=page.cover-vid-link col-width=7 outer-class="mb-5" conference=page.conference video-style="border: 0.5px solid #000;" %}
 
 <!-- icon banner -->
 {% include fisherman-icon-banner.html icons=page.proj-icons %}

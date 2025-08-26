@@ -1,0 +1,10 @@
+mover-dsl:
+    cat: llm animation
+    video: /assets/img/mover_tile.mp4
+    link: https://mover-dsl.github.io/
+    blank: true
+    title: >
+      MoVer: Motion Verification for Motion Graphics Animations
+    authors: >
+      <a href="https://majiaju.io" target="_blank">Jiaju Ma</a> and <a href="http://graphics.stanford.edu/~maneesh/" target="_blank">Maneesh Agrawala</a>
+    pub: ACM Transactions on Graphics (SIGGRAPH 2025)
