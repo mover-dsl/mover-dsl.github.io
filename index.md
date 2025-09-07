@@ -8,7 +8,7 @@ css:
 title: > 
     {{ site.data.work[page.proj-name].title }}
 
-sharing-image: https://mover-dsl.github.io/assets/img/mover_teaser.png
+sharing-image: https://mover-dsl.github.io/assets/img/mover_sharing.png
 
 description: >
     {{ site.data.work[page.proj-name].title }}
