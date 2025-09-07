@@ -192,6 +192,16 @@ a {
     font-style: italic;
 }
 
+#mover-logo {
+    width: 25% !important;
+}
+
+@media screen and (max-width: 991px) and (orientation: portrait) {
+    #mover-logo {
+        width: 50% !important;
+    }
+}
+
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
     .sidenav {
