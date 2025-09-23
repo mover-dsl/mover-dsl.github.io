@@ -5,6 +5,15 @@ mover-dsl:
     blank: true
     title: >
       MoVer: Motion Verification for Motion Graphics Animations
-    authors: >
-      <a href="https://majiaju.io" target="_blank">Jiaju Ma</a> and <a href="http://graphics.stanford.edu/~maneesh/" target="_blank">Maneesh Agrawala</a>
+    authors:
+      - Jiaju Ma
+      - Maneesh Agrawala
+    author-links:
+      - https://majiaju.io/
+      - https://graphics.stanford.edu/~maneesh/
+    author-institution:
+      - 1
+      - 1
+    instituions:
+      - Stanford University
     pub: ACM Transactions on Graphics (SIGGRAPH 2025)

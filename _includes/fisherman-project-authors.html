@@ -1,0 +1,21 @@
+{% assign authors = site.data.work[include.proj-name].authors %}
+{% assign author_links = site.data.work[include.proj-name].author-links %}
+{% assign author_institutions = site.data.work[include.proj-name].author-institution %}
+{% assign suffix = site.data.work[include.proj-name].suffix %}
+
+{% for author in authors -%}
+  {%- assign author_index = forloop.index0 -%}
+  {%- assign author_link = author_links[author_index] -%}
+  {%- assign institution_nums = author_institutions[author_index] -%}
+  {%- if institution_nums.size -%}
+    {%- assign superscript_text = institution_nums | join: "," -%}
+  {%- else -%}
+    {%- assign superscript_text = institution_nums -%}
+  {%- endif -%}
+  {%- if author_link and author_link != "None" -%}
+    <a href="{{ author_link }}" target="_blank">{%- if author == "Jiaju Ma" -%}<u>{{ author }}</u>{%- else -%}{{ author }}{%- endif -%}</a>{%- unless include.suppress-superscript -%}<sup>{{ superscript_text }}</sup>{%- endunless -%}{%- if forloop.last and suffix %} {{ suffix }}{% endif -%}
+  {%- else -%}
+    {%- if author == "Jiaju Ma" -%}<u>{{ author }}</u>{%- else -%}{{ author }}{%- endif -%}{%- unless include.suppress-superscript -%}<sup>{{ superscript_text }}</sup>{%- endunless -%}{%- if forloop.last and suffix %}{{ suffix }}{% endif -%}
+  {%- endif -%}
+  {%- if forloop.last -%}{%- else -%}{%- if forloop.rindex == 2 and authors.size == 2 %} and {% elsif forloop.rindex == 2 %}, and {% else %}, {% endif -%}{%- endif -%}
+{%- endfor %}

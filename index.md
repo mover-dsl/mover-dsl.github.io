@@ -94,9 +94,10 @@ bibtex: |
 
 <!-- landing -->
 {% capture proj-title %}{{ site.data.work[page.proj-name].title }}{% endcapture %}
-{% capture proj-sub %}{{ site.data.work[page.proj-name].authors }}{% endcapture %}
+{% capture proj-sub %}{% include fisherman-project-authors.html proj-name=page.proj-name %}{% endcapture %}
+{% capture proj-sub-2 %}{% include fisherman-project-institutions.html proj-name=page.proj-name %}{% endcapture %}
 
-{% include fisherman-landing.html title=proj-title subtitle=proj-sub cover-vid-link=page.cover-vid-link col-width=7 outer-class="mb-5" conference=page.conference video-style="border: 0.5px solid #000;" %}
+{% include fisherman-landing.html title=proj-title subtitle=proj-sub subtitle-2=proj-sub-2 cover-vid-link=page.cover-vid-link col-width=7 outer-class="mb-5" conference=page.conference video-style="border: 0.5px solid #000;" %}
 
 <!-- icon banner -->
 {% include fisherman-icon-banner.html icons=page.proj-icons %}

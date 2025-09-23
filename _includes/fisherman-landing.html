@@ -9,17 +9,18 @@
     <div class="row justify-content-center pt-5 pb-3">
 
         <div class="col-10 col-lg-7 my-3 d-block">
-            <video id="mover-logo" class="mb-2" playsinline autoplay loop muted
-                src="/assets/video/mover_main_sm.mp4">
-            </video>
-
             <h3 class="rubik">{{ include.title }}</h3>
             {% if include.subtitle %}
             <h5 class="rubik-light">{{ include.subtitle }}</h5>
             {% endif %}
+            {% if include.subtitle-2 %}
+            <h5 class="rubik-light">{{ include.subtitle-2 }}</h5>
+            {% endif %}
             {% if include.conference %}
             <br>
-            <a href="{{ include.conference.link }}" target="_blank"><h5><i>{{ include.conference.title}}</i></h5></a>
+            <a href="{{ include.conference.link }}" target="_blank">
+                <h5><i>{{ include.conference.title}}</i></h5>
+            </a>
             {% endif %}
             {% if include.award %}
             <h5 class="rubik-light">{{ include.award }}</h5>
@@ -37,8 +38,7 @@
             {% if include.cover-vid %}
 
             <video playsinline autoplay loop muted class="embed-responsive embed-responsive-1by1"
-                poster="/assets/img/loader.gif"
-                src="{{ include.cover-vid }}">
+                poster="/assets/img/loader.gif" src="{{ include.cover-vid }}">
             </video>
 
             {% elsif include.cover-vid-link %}

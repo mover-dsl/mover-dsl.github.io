@@ -1,0 +1,4 @@
+{% assign institutions = site.data.work[include.proj-name].instituions %}
+{% for institution in institutions %}
+<sup>{{ forloop.index }}</sup>{{ institution }}{% unless forloop.last %}&nbsp;{% endunless %}
+{% endfor %}
